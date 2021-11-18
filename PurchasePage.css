@@ -3,13 +3,15 @@ div {
     background-color: grey;
     text-decoration: none;
   width: 50%;
-    height: 88.5%;
+    height:101.5%;
     margin-left: 500px;
 font-size: xx-large;
+font-family: 'Cinzel', serif;
 }
 h2 { 
     color: red;
     background-color: black;
+    font-family: 'Cinzel', serif;
 }
 ol { 
     margin-left: 200px;
