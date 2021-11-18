@@ -2,8 +2,13 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    background-color: white;
+    font-family: 'Cinzel', serif;
+}
 
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("images/hero2.jpg");
+    background-size: cover;
 }
 
 #username,#email{
@@ -22,8 +27,7 @@
     width:25%;
     height: 60vh;
     text-align: center;
-    background-color:rgba(0, 0, 0, .5);
-    
+    background-color: gray;
     display: flex;
     flex-direction: column;
     font-size: xx-large;
@@ -37,7 +41,6 @@
     width: 80%;
     text-decoration: none;
     padding:2vh;
-   
     background-color: white;
     color: grey;
     margin: auto;
@@ -45,9 +48,15 @@
 }
 h3  {
     color: red;
-    background-color:rgba(0, 0, 0, .5);
-   padding: 10px;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 10px;
 }
-a:hover {
-    background-color: red;
-  }
+
+#CreateAccount {
+    font-size: 20px;
+    margin-bottom: 2vh;
+}
+
+#CreateAccount:hover {
+    border: 1px solid red;
+}
