@@ -88,16 +88,15 @@ footer ul {
 footer ul li {
 	float: left;
 	display: inline;
-	padding: 20px;
-	font-size: 20px;
 }
 
-footer ul li a {
+footer ul li div {
 	text-decoration: none;
 	color: goldenrod;
+	font-size: 200%;
 }
 
-footer ul li a:hover {
+footer ul li div:hover {
   color: black;
 }
 
