@@ -9,6 +9,10 @@ body {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url("images/hero2.jpg");
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
 }
 
 #username,
@@ -32,7 +36,7 @@ body {
 	flex-direction: column;
 	font-size: xx-large;
 	margin: auto;
-	margin-top: 20vh;
+	/* margin-top: 20vh; */
 	justify-content: space-evenly;
 	align-content: space-between;
 	border: 2px solid silver;
@@ -41,8 +45,8 @@ body {
 	width: 80%;
 	text-decoration: none;
 	padding: 2vh;
-	background-color: white;
-	color: grey;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: red;
 	margin: auto;
 	border-radius: 30px;
 	border: 1px solid black;
@@ -56,6 +60,8 @@ h3 {
 #CreateAccount {
 	font-size: 20px;
 	margin-bottom: 2vh;
+	text-decoration: none;
+	color: black;
 }
 
 .submit:hover {
