@@ -15,8 +15,9 @@ body{
     flex-direction: column;
     margin: 15px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: darkgrey;
+    
 }
 .itemtext{
     text-align: center;
@@ -26,12 +27,22 @@ body{
     font-size: larger;
 }
 .itembtn{
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid black;
     background-color: darkgrey;
     color: darkred;
     font-size: 12pt;
     font-family: 'Cinzel', serif;
     font-weight: bold;
+    height: 30px;
+    letter-spacing: 0;
+    transition: 0.3s;
+}
+.itembtn:hover{
+    background-color: darkred;
+    color: darkgrey;
+    letter-spacing: 3px;
 }
 .price{
     text-align: center;

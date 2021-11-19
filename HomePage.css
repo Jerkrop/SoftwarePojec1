@@ -71,6 +71,10 @@ footer{
     text-align: center;
 }
 
+footer img{
+  width: 40%;
+}
+
 footer ul{
   margin-left: 260px;
 }
