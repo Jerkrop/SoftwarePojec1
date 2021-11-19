@@ -17,6 +17,7 @@ body{
     border: 1px solid black;
     border-radius: 20px;
     background-color: darkgrey;
+    
 }
 .itemtext{
     text-align: center;
@@ -34,6 +35,14 @@ body{
     font-size: 12pt;
     font-family: 'Cinzel', serif;
     font-weight: bold;
+    height: 30px;
+    letter-spacing: 0;
+    transition: 0.3s;
+}
+.itembtn:hover{
+    background-color: darkred;
+    color: darkgrey;
+    letter-spacing: 3px;
 }
 .price{
     text-align: center;
