@@ -2,10 +2,10 @@ div {
     text-align: center;
     background-color: grey;
     text-decoration: none;
-  width: 50%;
-    height:101.5%;
-    margin-left: 500px;
-font-size: xx-large;
+  width: 37.5%;
+    height:105%;
+    margin-left: 460px;
+font-size: x-large;
 font-family: 'Cinzel', serif;
 }
 h2 { 
@@ -14,10 +14,13 @@ h2 {
     font-family: 'Cinzel', serif;
 }
 ol { 
-    margin-left: 200px;
+    margin-left: 10px;
+}
+li{
+    border: 1px solid black;
 }
 body {
-    background-image: url(./images/hero2.jpg);
+    background-image: url(./images/hero3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
