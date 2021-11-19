@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <link rel='stylesheet' href='./Signup.css'>
-    </head>
-    <body>
-        <div class='login'>
-                <h3>Login</h3>
-                <input type='text' id='username' name='username' placeholder="Username">
-                <input type='text' id='email' name='email' placeholder="Password">
-                <a class='submit' id='submit' href='#'>Login</a>
-        </div>
-        <script src=''></script>
-    </body>
+		<link rel="stylesheet" href="./Signup.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com/" />
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="login">
+			<h3>Login</h3>
+			<input type="text" id="username" name="username" placeholder="Username" />
+			<input type="text" id="email" name="email" placeholder="Password" />
+			<p id="emptyFields" style="color: red"></p>
+			<a class="submit" onclick="updateUser()" id="submit" href="#">Login</a>
+			<a id="CreateAccount" href="SignUp.html"
+				>Don't have an account? Create one here!</a
+			>
+		</div>
+		<!-- <script src='./LoginSignup.js'></script> -->
+		<script src="signup.js"></script>
+	</body>
 </html>
