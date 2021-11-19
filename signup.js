@@ -14,4 +14,15 @@ function updateUser() {
 		document.getElementById("emptyFields").innerHTML =
 			"The username or password box is empty";
 	}
+   else {
+      for (let i = 0; i < localStorage.getItem("users").length; i++) {
+         if (usernameInput == localStorage.getItem("users", users[i].username)) {
+            console.log("hi")
+            document.getElementById("emptyFields").innerHTML = 'This username is already taken';
+         }
+         else {
+
+         }
+      }
+   }
 }
