@@ -20,7 +20,7 @@ function updateUser() {
             document.getElementById("emptyFields").innerHTML = 'This username is already taken';
          }
          else {
-            
+            window.location.href = "http://localhost:8080/school/cset120/SoftwarePojec1/HomePage.html";
          }
       }
    }
