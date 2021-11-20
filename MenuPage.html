@@ -1,216 +1,309 @@
 <html>
-    <head>
+	<head>
+		<script>
+			let dragonSushi = { name: "dragon sushi", id: 1, count: 1, price: 5 };
+			let CheeseburgerSushi = {
+				name: "Cheeseburger Sushi",
+				id: 2,
+				count: 1,
+				price: 5,
+			};
 
-        <script>   
-        let dragonSushi = { "name": "dragon sushi", id: 1, count: 1 , price:5}
-      let CheeseburgerSushi  =  { "name": "Cheeseburger Sushi", id: 2, count: 1, price:5 }
+			const items_array = [dragonSushi, CheeseburgerSushi];
 
-      const items_array = [
-dragonSushi,
-CheeseburgerSushi
+			let cart = [];
 
-];
+			function addToCart(btn) {
+				for (let i = 0; i < items_array.length; i++) {
+					var objID = cart[i].id;
+					console.log(objID);
+					console.log(btn.id);
+					if (btn.id == objID) {
+						cart.push(cart[i]);
+					}
+				}
+				console.log(cart);
+			}
+		</script>
 
-let cart = [];
+		<title>Menu Page</title>
+		<link rel="stylesheet" href="./MenuPage.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="nav">
+			<ul>
+				<li><a href="HomePage.html">Home</a></li>
+				<li><a href="MenuPage.html">Menu</a></li>
+				<li><a href="#">Make Your Own</a></li>
+				<li><a href="PurchasePage.html">Cart</a></li>
+				<li><a href="Login.html">Log In</a></li>
+			</ul>
+		</div>
+		<div class="top">
+			<img src=images/logo1.png class="logo">
+			<h2 class="header">Menu</h2>
+		</div>
+		<br />
+		<div id="menu">
+			<table>
+				<tr>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Dragon Sushi</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/dragon.jfif" class="images" />
+							<button class="itembtn" onclick="addToCart(this)" id="1">
+								Add to cart
+							</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Cheeseburger Sushi</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/cheeseburger.png" class="images" />
+							<button class="itembtn" onclick="addToCart(this)" id="2">
+								Add to cart
+							</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Maki</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/maki.jfif" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Temaki</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/temaki.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Uramaki</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/uramaki.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Tiger Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/tiger.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Philadelphia Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/phil.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Crunch Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/crunch.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Dynamite Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/dynamite.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Rainbow Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/rainbow.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Surf and Turf</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/surfnturf.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Volcano Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/volcano.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Sushi Taco</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/taco.png" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Spicy Tuna Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/spicytuna.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Shrimp Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/shrimp.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Spider Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/spider.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Lobster Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/lobster.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Blob Fish Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/blob.jfif" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Jelly Fish Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/jelly.jfif" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+					<th>
+						<div class="item">
+							<div class="itemtop">
+								<p class="itemtext">Vegan Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/vegan.jpg" class="images" />
+							<button class="itembtn">Add to cart</button>
+						</div>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="customSushi">
+			<a href="MakeYourOwn.html">Make Your Own Sushi</a>
+			<p>
+				Click here to create your own sushi roll! Choose from our many fresh
+				ingredients to make the sushi roll for you!
+			</p>
+		</div>
+		<footer>
+			<img src="images/New_Project_1.png" />
+			<ul>
+				<li>
+					<div id="insta">
+						<a href="http://www.instagram.com/_samurai_sushi_real/"
+							><ion-icon name="logo-instagram"></ion-icon
+						></a>
+					</div>
+				</li>
+			</ul>
+		</footer>
 
-function addToCart(btn)
-{
-    for (let i = 0; i < items_array.length; i++)
-    {
-var objID = cart[i].id
-console.log(objID)
-console.log(btn.id)
-if(btn.id == objID )
-{
-cart.push(cart[i])
-}
-
-    }
-    console.log(cart)
-}
-
-
-        </script>
-
-        <title>Menu Page</title>
-        <link rel="stylesheet" href="./MenuPage.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="top">
-        <img src=images/logo1.png class="logo">
-        <h2 class="header">Main Menu</h2>
-        </div>
-        <br>
-        <div id="menu">
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Dragon Sushi</p>
-                <p class="price">9.99</p>
-                </div>
-                <img src="images/dragon.jfif" class="images">
-                <button class="itembtn" onclick="addToCart(this)" id="1">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Cheeseburger Sushi</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/cheeseburger.png" class="images">
-                <button class="itembtn" onclick="addToCart(this)" id="2">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Maki</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/maki.jfif" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Temaki</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/temaki.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Uramaki</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/uramaki.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Tiger Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/tiger.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Philadelphia Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/phil.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Crunch Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/crunch.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Dynamite Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/dynamite.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Rainbow Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/rainbow.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Surf and Turf</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/surfnturf.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Volcano Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/volcano.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Sushi Taco</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/taco.png" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Spicy Tuna Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/spicytuna.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Shrimp Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/shrimp.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Spider Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/spider.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Lobster Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/lobster.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Blob Fish Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/blob.jfif" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Jelly Fish Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/jelly.jfif" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div class="item">
-                <div class="itemtop">
-                <p class="itemtext">Vegan Roll</p>
-                <p class="price">9.99</p>
-            </div>
-                <img src="images/vegan.jpg" class="images">
-                <button class="itembtn">Add to cart</button>
-            </div>
-            <div>
-            <a href="MakeYourOwn.html">Make Your Own Sushi</a>
-            <p>Click here to create your own sushi roll!
-            Choose from our many fresh ingredients to make the sushi roll for you!
-            </p>
-            </div>
-        </div>
-    </body>
+		<div class="navbottom">
+			<ul>
+				<li><a href="HomePage.html">Home</a></li>
+				<li><a href="MenuPage.html">Menu</a></li>
+				<li><a href="#">Make Your Own</a></li>
+				<li><a href="PurchasePage.html">Cart</a></li>
+				<li><a href="SignUp.html">Log In</a></li>
+			</ul>
+		</div>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+	</body>
 </html>
