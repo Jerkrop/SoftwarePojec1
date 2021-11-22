@@ -92,11 +92,6 @@ footer ul li {
 	padding-right: 50px;
 }
 
-footer ul li a {
-	text-decoration: none;
-	color: goldenrod;
-}
-
 footer ul li a:hover {
 	color: black;
   }
@@ -107,7 +102,11 @@ footer ul li div {
 	font-size: 200%;
 }
 
-footer ul li div:hover {
+footer ul li div a:visited {
+	color: goldenrod;
+  }
+
+footer ul li div a:hover {
   color: black;
 }
 
@@ -121,6 +120,7 @@ footer ul li div:hover {
 	height: 500px;
 	border: #8F1418 2px solid;
 	margin-top: 25px;
+	cursor: pointer;
 }
 
 @keyframes display {
