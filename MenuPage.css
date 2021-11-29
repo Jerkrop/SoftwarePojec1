@@ -213,3 +213,12 @@ footer ul li div a:hover {
 #veggie table {
 	color: rgb(184, 13, 13);
 }
+
+#sauces table {
+	color: rgb(184, 13, 13);
+}
+
+#sauces table input {
+	margin-left: 2vw;
+	margin-right: 0.5vw;
+}
