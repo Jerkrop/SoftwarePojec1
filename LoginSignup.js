@@ -1,39 +1,40 @@
 let userArr = [];
 $(document).ready(function () {
 	let attempts = 11;
-	function isEmail(address) {
-		address = address.split("");
-		if (
-			address.indexOf("@") != -1 &&
-			address.indexOf("@") != 0 &&
-			address.indexOf(".") > address.indexOf("@")
-		) {
-			console.log(true);
-			return true;
-		} else {
-			console.log(false);
-			return false;
-		}
-	}
+	// function isEmail(address) {
+	// 	address = address.split("");
+	// 	if (
+	// 		address.indexOf("@") != -1 &&
+	// 		address.indexOf("@") != 0 &&
+	// 		address.indexOf(".") > address.indexOf("@")
+	// 	) {
+	// 		console.log(true);
+	// 		return true;
+	// 	} else {
+	// 		console.log(false);
+	// 		return false;
+	// 	}
+	// }
 
-	$(".submit").click(function () {
+	$("#submit").click(function () {
 		let curretStorage = JSON.parse(localStorage.getItem("users"));
 		if (curretStorage == null && isEmail($("#email").val())) {
 			const newUser = {
 				userName: $("#username").val(),
 				email: $("#email").val(),
-				winsTic: 0,
-				loseTic: 0,
-				winsRPS: 0,
-				loseRPS: 0,
 			};
 			localStorage.setItem("users", JSON.stringify(newUser));
-			window.location.replace("../main/main_page.html");
+			window.location.replace("HomePage.html");
 		} else if (
 			$("#username").val() == curretStorage.userName &&
 			$("#email").val() == curretStorage.email
 		) {
-			window.location.replace("../main/main_page.html");
+			window.location.replace(".../HomepPage.html");
+		} else if (
+			$("#username").val() == "admin" &&
+			$("#email").val() == "admin"
+		) {
+			window.location.replace(".../ManagerPage.html");
 		} else {
 			attempts -= 1;
 			if (attempts > 0) {
@@ -51,9 +52,9 @@ $(document).ready(function () {
 			}
 		}
 	});
-	$("*").keyup(function (event) {
-		if (event.keyCode === 13) {
-			$(".submit").click();
-		}
-	});
+	// $("*").keyup(function (event) {
+	// 	if (event.keyCode === 13) {
+	// 		$(".submit").click();
+	// 	}
+	// });
 });
