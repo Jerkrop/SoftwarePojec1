@@ -1,24 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SamuraiSushi/Home</title>
-        <link rel="stylesheet" href="HomePage.css">
-    </head>
-    <body>
-        <div class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Cart</a></li>
-                <li><a href="#">Make Your Own</a></li>
-            </ul>
-        </div>
-        <div class="hero">
-            <div class="cover">
-            </div>
-        </div>
-        <div class="test">
-            <img src="images/hero.jpg">
-        </div>
-    </body>
+	<head>
+		<title>Samurai Sushi - Home</title>
+		<link rel="stylesheet" href="HomePage.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="nav">
+			<ul>
+				<li><a href="HomePage.html">Home</a></li>
+				<li><a href="MenuPage.html">Menu</a></li>
+				<li><a href="PurchasePage.html">Cart</a></li>
+				<li><a href="Login.html">Log In</a></li>
+			</ul>
+		</div>
+
+		<div class="hero">
+			<div class="cover">
+				<img src="images/New_Project_1.png" class="image" />
+			</div>
+		</div>
+
+		<div class="pic-ctn">
+			<img src="images/rainbow.jpg" alt="" class="pic" onclick="location.href='MenuPage.html'"/>
+			<img src="images/spicytuna.jpg" alt="" class="pic" onclick="location.href='MenuPage.html'"/>
+			<img src="images/volcano.jpg" alt="" class="pic" onclick="location.href='MenuPage.html'"/>
+			<img src="images/uramaki.jpg" alt="" class="pic" onclick="location.href='MenuPage.html'"/>
+			<img src="images/shrimp.jpg" alt="" class="pic" onclick="location.href='MenuPage.html'"/>
+		</div>
+
+		<section class="bio">
+			<h1>Who we Are</h1>
+			<p>
+				At Samurai Sushi we strive to provide the best sushi for the best prices! 
+			</p>
+		</section>
+
+		<footer>
+			<img src="images/New_Project_1.png" />
+			<ul>
+				<li>
+					<div id="insta"><a target="_blank" href="http://www.instagram.com/_samurai_sushi_real/"><ion-icon name="logo-instagram"></ion-icon></a></div>
+				</li>
+				<li>
+					<div id="youtube"><a target="_blank" href="http://www.youtube.com"><ion-icon name="logo-youtube"></ion-icon></a></div>
+				</li>
+				<li>
+					<div id="twitter"><a target="_blank" href="http://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a></div>
+				</li>
+			</ul>
+		</footer>
+		
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	</body>
 </html>

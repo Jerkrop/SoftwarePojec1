@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <link rel='stylesheet' href='./Signup.css'>
-        <link rel="preconnect" href="https://fonts.googleapis.com/">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class='login'>
-                <h3>Sign Up</h3>
-                <input type='text' id='username' name='username' placeholder="Username">
-                <input type='text' id='email' name='email' placeholder="Password">
-                <a class='submit' id='submit' href='#'>Create Account</a>
-                <a id="CreateAccount" href="SignUp.html">Already have an account? Login in here!</a>
-        </div>
-        <script src='./LoginSignup.js'></script>
-    </body>
+		<link rel="stylesheet" href="./Signup.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com/" />
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div id="logo">
+			<img src="images/New_Project_1.png" alt="" />
+		</div>
+		<div class="login">
+			<h3>Sign Up</h3>
+			<input type="text" id="username" name="username" placeholder="Username" />
+			<input type="password" id="email" name="email" placeholder="Password" />
+			<p id="emptyFields"></p>
+			<a class="submit" onclick="updateUser()" id="submit" href="#"
+				>Create Account</a
+			>
+			<a id="CreateAccount" href="Login.html"
+				>Already have an account? Login in here!</a
+			>
+		</div>
+		<!-- <script src='./LoginSignup.js'></script> -->
+		<script src="signup.js"></script>
+	</body>
 </html>
