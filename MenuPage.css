@@ -17,7 +17,11 @@ body {
 	margin-bottom: 5vh;
 }
 
-
+#topLogo {
+	background-color: #8F1418;
+	width: 100%;
+	text-align: center;
+}
 
 .item {
 	display: flex;
