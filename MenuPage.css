@@ -226,3 +226,12 @@ footer ul li div a:hover {
 	margin-left: 2vw;
 	margin-right: 0.5vw;
 }
+#additem{
+	background-color: #8F1418;
+	color: goldenrod;
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-right: 500px;
+	padding: 10px;
+}
