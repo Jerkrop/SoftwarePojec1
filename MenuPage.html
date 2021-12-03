@@ -1,29 +1,7 @@
 <html>
 	<head>
 		<script>
-			let dragonSushi = { name: "dragon sushi", id: 1, count: 1, price: 5 };
-			let CheeseburgerSushi = {
-				name: "Cheeseburger Sushi",
-				id: 2,
-				count: 1,
-				price: 5,
-			};
-
-			const items_array = [dragonSushi, CheeseburgerSushi];
-
-			let cart = [];
-
-			function addToCart(btn) {
-				for (let i = 0; i < items_array.length; i++) {
-					var objID = cart[i].id;
-					console.log(objID);
-					console.log(btn.id);
-					if (btn.id == objID) {
-						cart.push(cart[i]);
-					}
-				}
-				console.log(cart);
-			}
+			
 		</script>
 
 		<title>Samurai Sushi - Menu</title>
@@ -272,6 +250,7 @@
 			<p>
 				Make your own sushi roll! Choose from our many fresh ingrediants to make the sushi roll for you!
 			</p>
+			<h3>$11.99</h3>
 			</div>
 			<div id="meats">
 			<h3>Meat</h3>
@@ -324,7 +303,9 @@
 					<th><input type="checkbox" value="Wasabi"><label for="Wasabi">Wasabi</label></th>
 					<th><input type="checkbox" value="EelSauce"><label for="EelSauce">EelSauce</label></th>
 				</tr>
+				
 			</table>
+			<button>Add to Cart</button>
 			</div>
 		</form>
 		<footer>
