@@ -17,6 +17,12 @@ body {
 	margin-bottom: 5vh;
 }
 
+#menuHead {
+	background-color:#8F1418;
+	color: black;
+	padding: 2vh;
+}
+
 #topLogo {
 	background-color: #8F1418;
 	width: 100%;
