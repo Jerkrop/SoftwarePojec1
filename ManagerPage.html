@@ -1,0 +1,309 @@
+<html>
+	<head>
+		<title>Manager Page</title>
+		<link rel="stylesheet" href="./MenuPage.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+		<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	</head>
+	<body>
+		<div class="nav">
+			<ul>
+				<li><a href="HomePage.html">Home</a></li>
+				<li><a href="MenuPage.html">Menu</a></li>
+				<li><a href="PurchasePage.html">Cart</a></li>
+				<li><a href="Login.html">Log In</a></li>
+			</ul>
+		</div>
+		<div class="top">
+			<div  id="topLogo">
+			<img src=images/logo1.png class="logo">
+			</div>
+			<h2 class="header">Manager Page</h2>
+		</div>
+		<br />
+		<div id="menu">
+			<table id="menutable">
+				<tr>
+					<th>
+						<div class="item" id="item1">
+							<div class="itemtop">
+								<p class="itemtext">Dragon Sushi</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/dragon.jfif" class="images" />
+							<button class="itembtn" onclick="removeItem(item1)" id="1">
+								Remove
+							</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item2">
+							<div class="itemtop">
+								<p class="itemtext">Cheeseburger Sushi</p>
+								<p class="price">7.99</p>
+							</div>
+							<img src="images/cheeseburger.png" class="images" />
+							<button class="itembtn" onclick="removeItem(item2)" id="2">
+								Remove
+							</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item3">
+							<div class="itemtop">
+								<p class="itemtext">Maki</p>
+								<p class="price">8.99</p>
+							</div>
+							<img src="images/maki.jfif" class="images" />
+							<button class="itembtn" onclick="removeItem(item3)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item4">
+							<div class="itemtop">
+								<p class="itemtext">Temaki</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/temaki.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item4)">Remove</button>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="item" id="item5">
+							<div class="itemtop">
+								<p class="itemtext">Uramaki</p>
+								<p class="price">10.99</p>
+							</div>
+							<img src="images/uramaki.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item5)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item6">
+							<div class="itemtop">
+								<p class="itemtext">Tiger Roll</p>
+								<p class="price">7.99</p>
+							</div>
+							<img src="images/tiger.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item6)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item7">
+							<div class="itemtop">
+								<p class="itemtext">Philadelphia Roll</p>
+								<p class="price">6.99</p>
+							</div>
+							<img src="images/phil.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item7)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item8">
+							<div class="itemtop">
+								<p class="itemtext">Crunch Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/crunch.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item8)">Remove</button>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="item" id="item9">
+							<div class="itemtop">
+								<p class="itemtext">Dynamite Roll</p>
+								<p class="price">8.99</p>
+							</div>
+							<img src="images/dynamite.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item9)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item10">
+							<div class="itemtop">
+								<p class="itemtext">Rainbow Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/rainbow.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item10)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item11">
+							<div class="itemtop">
+								<p class="itemtext">Surf and Turf</p>
+								<p class="price">11.99</p>
+							</div>
+							<img src="images/surfnturf.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item11)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item12">
+							<div class="itemtop">
+								<p class="itemtext">Volcano Roll</p>
+								<p class="price">7.99</p>
+							</div>
+							<img src="images/volcano.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item12)">Remove</button>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="item" id="item13">
+							<div class="itemtop">
+								<p class="itemtext">Sushi Taco</p>
+								<p class="price">10.99</p>
+							</div>
+							<img src="images/taco.png" class="images" />
+							<button class="itembtn" onclick="removeItem(item13)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item14">
+							<div class="itemtop">
+								<p class="itemtext">Spicy Tuna Roll</p>
+								<p class="price">8.99</p>
+							</div>
+							<img src="images/spicytuna.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item14)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item15">
+							<div class="itemtop">
+								<p class="itemtext">Shrimp Roll</p>
+								<p class="price">11.99</p>
+							</div>
+							<img src="images/shrimp.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item15)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item16">
+							<div class="itemtop">
+								<p class="itemtext">Spider Roll</p>
+								<p class="price">9.99</p>
+							</div>
+							<img src="images/spider.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item16)">Remove</button>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="item" id="item17">
+							<div class="itemtop">
+								<p class="itemtext">Lobster Roll</p>
+								<p class="price">10.99</p>
+							</div>
+							<img src="images/lobster.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item17)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item18">
+							<div class="itemtop">
+								<p class="itemtext">Blob Fish Roll</p>
+								<p class="price">12.99</p>
+							</div>
+							<img src="images/blob.jfif" class="images" />
+							<button class="itembtn" onclick="removeItem(item18)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item19">
+							<div class="itemtop">
+								<p class="itemtext">Jelly Fish Roll</p>
+								<p class="price">6.99</p>
+							</div>
+							<img src="images/jelly.jfif" class="images" />
+							<button class="itembtn" onclick="removeItem(item19)">Remove</button>
+						</div>
+					</th>
+					<th>
+						<div class="item" id="item20">
+							<div class="itemtop">
+								<p class="itemtext">Vegan Roll</p>
+								<p class="price">15.99</p>
+							</div>
+							<img src="images/vegan.jpg" class="images" />
+							<button class="itembtn" onclick="removeItem(item20)">Remove</button>
+						</div>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="additem">
+			<p>Add new item</p>
+			<input type="text" id="ItemName" placeholder="Enter item name">
+			<input type="text" id="ItemPrice" placeholder="Enter item price">
+			 <button id="btn_add">Add item</button>
+		</div>
+		<footer>
+			<img src="images/New_Project_1.png" />
+			<ul>
+				<li>
+					<div id="insta"><a target="_blank" href="http://www.instagram.com/_samurai_sushi_real/"><ion-icon name="logo-instagram"></ion-icon></a></div>
+				</li>
+				<li>
+					<div id="youtube"><a target="_blank" href="http://www.youtube.com"><ion-icon name="logo-youtube"></ion-icon></a></div>
+				</li>
+				<li>
+					<div id="twitter"><a target="_blank" href="http://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a></div>
+				</li>
+			</ul>
+		</footer>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+		<script>
+			function removeItem(item){
+				item.parentNode.removeChild(item);
+				}
+				function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#addimage')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+		
+				$(document).ready(function() {
+
+$("#btn_add").click(function() {
+	let newitem = document.getElementById('ItemName').value
+	let newprice = document.getElementById('ItemPrice').value
+	
+	console.log(newitem)
+	console.log(newprice)
+	
+$("#menutable").append("<th><div class='item' id='item21'> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><button class='itembtn' onclick='removeItem(item21)'>Remove</button></div></th>");
+});	
+})
+;
+			
+		</script>
+	</body>
+</html>
