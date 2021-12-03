@@ -247,12 +247,7 @@
 			<p>Add new item</p>
 			<input type="text" id="ItemName" placeholder="Enter item name">
 			<input type="text" id="ItemPrice" placeholder="Enter item price">
-			<form>
-				<input type='file' accept="image/*" id="ximage" onchange="readURL(this);" />
-				<label for="ximage"></label>
-				<img id="addimage" src="#" alt="your image" />
-			</form>
-			<button id="btn_add">Add item</button>
+			 <button id="btn_add">Add item</button>
 		</div>
 		<footer>
 			<img src="images/New_Project_1.png" />
@@ -300,12 +295,11 @@
 $("#btn_add").click(function() {
 	let newitem = document.getElementById('ItemName').value
 	let newprice = document.getElementById('ItemPrice').value
-	let newimage = document.getElementById('ximage').
-  
+	
 	console.log(newitem)
 	console.log(newprice)
-	console.log(newimage)
-$("#menutable").append("<th><div class='item' id='item21'> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src='' class='images' /><button class='itembtn' onclick='removeItem(item21)'>Remove</button></div></th>");
+	
+$("#menutable").append("<th><div class='item' id='item21'> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><button class='itembtn' onclick='removeItem(item21)'>Remove</button></div></th>");
 });	
 })
 ;
