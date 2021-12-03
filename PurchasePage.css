@@ -7,14 +7,14 @@
 	background-color: grey;
 	text-decoration: none;
 	width: 50%;
-	height: 101.5%;
-	margin-left: 500px;
+	margin-left: auto;
+	margin-right: auto;
 	font-size: xx-large;
 	font-family: "Cinzel", serif;
 }
 h2 {
-	color: #8F1418;
-	background-color: black;
+	color: black;
+	background-color: #8F1418;
 	font-family: "Cinzel", serif;
 }
 ol {
@@ -22,9 +22,8 @@ ol {
 }
 body {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("images/hero2.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+		url("images/background.jpg");
+	background-repeat: repeat;
 }
 
 .nav {
