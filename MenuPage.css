@@ -251,11 +251,19 @@ footer ul li div a:hover {
 	font-size: xx-large;
 	transition: 0.3s;
 	padding: 10px;
-	margin-left: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-top: -75px;
 
 }
 .custombtn:hover{
 	color: goldenrod;
 	letter-spacing: 3px;
+}
+.myosushi{
+	display: flex;
+	flex-direction: column;
+	margin-left: 5%;
+	margin-right: 100px;
 }
