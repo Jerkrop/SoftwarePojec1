@@ -9,6 +9,7 @@
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 10px;
 	font-size: xx-large;
 	font-family: "Cinzel", serif;
 }
@@ -16,6 +17,8 @@ h2 {
 	color: black;
 	background-color: #8F1418;
 	font-family: "Cinzel", serif;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 }
 ol {
 	margin-left: 200px;
