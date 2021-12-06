@@ -241,3 +241,21 @@ footer ul li div a:hover {
 	margin-right: 550px;
 	padding: 10px;
 }
+.cart{
+	color: white;
+}
+.custombtn{
+	background-color: black;
+	color: #8F1418;
+	border: 2px solid #8F1418;
+	font-size: xx-large;
+	transition: 0.3s;
+	padding: 10px;
+	margin-left: 600px;
+	margin-top: -75px;
+
+}
+.custombtn:hover{
+	color: goldenrod;
+	letter-spacing: 3px;
+}
