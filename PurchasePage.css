@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 .flex-container {
 	text-align: center;
 	background-color: grey;
@@ -13,6 +14,11 @@
 	font-size: xx-large;
 	font-family: "Cinzel", serif;
 }
+
+.flex-container ol li:hover{
+	color: goldenrod;
+}
+
 h2 {
 	color: black;
 	background-color: #8F1418;
@@ -20,6 +26,7 @@ h2 {
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 }
+
 ol {
 	margin-left: 200px;
 }
