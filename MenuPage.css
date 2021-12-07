@@ -17,6 +17,12 @@ body {
 	margin-bottom: 5vh;
 }
 
+#menuHead {
+	background-color:#8F1418;
+	color: black;
+	padding: 2vh;
+}
+
 #topLogo {
 	background-color: #8F1418;
 	width: 100%;
@@ -231,8 +237,8 @@ footer ul li div a:hover {
 	color: goldenrod;
 	display: flex;
 	flex-direction: column;
-	margin-left: 500px;
-	margin-right: 500px;
+	margin-left: 550px;
+	margin-right: 550px;
 	padding: 10px;
 }
 

@@ -18,23 +18,23 @@ $(document).ready(function () {
 
 	$("#submit").click(function () {
 		let curretStorage = JSON.parse(localStorage.getItem("users"));
-		if (curretStorage == null && isEmail($("#email").val())) {
+	 	if (
+		$("#username").val() == "admin" &&
+		$("#email").val() == "admin"
+		) { window.location.href = "ManagerPage.html" }
+		else if (curretStorage == null) {
 			const newUser = {
 				userName: $("#username").val(),
 				email: $("#email").val(),
 			};
+			console.log("ah;dfjkalhldsf")
 			localStorage.setItem("users", JSON.stringify(newUser));
-			window.location.replace("HomePage.html");
+			window.location.href = "HomePage.html";
 		} else if (
 			$("#username").val() == curretStorage.userName &&
 			$("#email").val() == curretStorage.email
 		) {
-			window.location.replace(".../HomepPage.html");
-		} else if (
-			$("#username").val() == "admin" &&
-			$("#email").val() == "admin"
-		) {
-			window.location.replace(".../ManagerPage.html");
+			window.location.href = "HomePage.html";
 		} else {
 			attempts -= 1;
 			if (attempts > 0) {
