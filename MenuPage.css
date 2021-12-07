@@ -235,3 +235,36 @@ footer ul li div a:hover {
 	margin-right: 500px;
 	padding: 10px;
 }
+
+.confirmOrder{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	border: #8F1418 2px solid;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #8F1418;
+}
+
+.confirmOrder button{
+	border: 1px solid darkred;
+	width: 100%;
+	background-color: darkred;
+	color: goldenrod;
+	font-size: 125%;
+	font-family: "Cinzel", serif;
+	font-weight: bold;
+	letter-spacing: 0;
+	transition: 0.3s;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+
+.confirmOrder button:hover{
+	background-color: black;
+	color: darkred;
+	letter-spacing: 3px;
+	border-color:darkred;
+	cursor: pointer;
+}
