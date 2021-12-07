@@ -241,29 +241,36 @@ footer ul li div a:hover {
 	margin-right: 550px;
 	padding: 10px;
 }
-.cart{
-	color: white;
-}
-.custombtn{
-	background-color: black;
-	color: #8F1418;
-	border: 2px solid #8F1418;
-	font-size: xx-large;
-	transition: 0.3s;
-	padding: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: -75px;
 
+.confirmOrder{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	border: #8F1418 2px solid;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #8F1418;
 }
-.custombtn:hover{
+
+.confirmOrder button{
+	border: 1px solid darkred;
+	width: 100%;
+	background-color: darkred;
 	color: goldenrod;
-	letter-spacing: 3px;
+	font-size: 125%;
+	font-family: "Cinzel", serif;
+	font-weight: bold;
+	letter-spacing: 0;
+	transition: 0.3s;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
 }
-.myosushi{
-	display: flex;
-	flex-direction: column;
-	margin-left: 5%;
-	margin-right: 100px;
+
+.confirmOrder button:hover{
+	background-color: black;
+	color: darkred;
+	letter-spacing: 3px;
+	border-color:darkred;
+	cursor: pointer;
 }
