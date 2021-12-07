@@ -1,3 +1,4 @@
+
 let userArr = [];
 $(document).ready(function () {
 	let attempts = 11;
@@ -58,3 +59,4 @@ $(document).ready(function () {
 	// 	}
 	// });
 });
+
