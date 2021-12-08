@@ -11,6 +11,7 @@
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 20px;
 	border-radius: 10px;
 	font-size: xx-large;
 	font-family: "Cinzel", serif;
@@ -33,8 +34,7 @@ ol {
 }
 
 body {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("images/background.jpg");
+	background-image: url('https://rbsushi.com/wp-content/uploads/2019/10/rbushi_bg_01.png');
 	background-repeat: repeat;
 }
 
@@ -43,9 +43,9 @@ body {
 	padding-top: 2vh;
 	padding-bottom: 2vh;
 	text-align: center;
+	font-family: "Cinzel", serif;
 	background-color: black;
 	overflow: hidden;
-	margin-bottom: 5vh;
 }
 
 .nav ul li {
@@ -119,5 +119,21 @@ footer ul li a:hover {
  
  .navbottom ul a:hover {
 	color: goldenrod;
-
  }
+
+ .top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0%;
+}
+
+.logo {
+	width: 30%;
+}
+
+#topLogo {
+	background-color: #8F1418;
+	width: 100%;
+	text-align: center;
+}
