@@ -300,8 +300,7 @@ footer ul li div a:hover {
 	font-weight: bold;
 	letter-spacing: 0;
 	transition: 0.3s;
-	margin-left: 350px;
-	margin-right: 350px;
+	margin-left: 25%;
 	padding-top: 1vh;
 	padding-bottom: 1vh;
 }
