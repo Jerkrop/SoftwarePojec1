@@ -1,3 +1,4 @@
+
 * {
 	margin: 0;
 	padding: 0;
@@ -237,8 +238,8 @@ footer ul li div a:hover {
 	color: goldenrod;
 	display: flex;
 	flex-direction: column;
-	margin-left: 550px;
-	margin-right: 550px;
+	margin-left: 450px;
+	margin-right: 450px;
 	padding: 10px;
 }
 
@@ -275,6 +276,40 @@ footer ul li div a:hover {
 	cursor: pointer;
 }
 
-.cart {
-	color: white;
+.cart{
+	backdrop-filter: blur(10px);
+	border: darkred 2px solid;
+	color: #8F1418;
+	margin: 10px;
+	padding: 10px;
+}
+
+.cart h1{
+	text-align: center;
+	color: goldenrod;
+}
+
+.cart button{
+	width: 50%;
+	border-radius: 5px;
+	background-color: darkred;
+	color: goldenrod;
+	border: none;
+	font-size: 125%;
+	font-family: "Cinzel", serif;
+	font-weight: bold;
+	letter-spacing: 0;
+	transition: 0.3s;
+	margin-left: 350px;
+	margin-right: 350px;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+
+.cart button:hover{
+	background-color: goldenrod;
+	color: black;
+	letter-spacing: 3px;
+	border-color:darkred;
+	cursor: pointer;
 }

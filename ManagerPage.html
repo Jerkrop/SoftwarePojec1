@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<title>Manager Page</title>
@@ -290,16 +291,9 @@
 			<input type="text" id="ItemName" placeholder="Enter item name" />
 			<input type="text" id="ItemPrice" placeholder="Enter item price" />
 			<!-- <form> -->
-			<input
-				capture="user"
-				type="file"
-				accept="image/*"
-				id="ximage"
-				onchange="readURL(this);"
-			/>
-			<label for="ximage"></label>
-			<img id="addimage" src="#" alt="your image" />
-			<button id="btn_add">Add</button>
+				<input  type='file' accept="image/*" id="myFileInput"/>
+				
+				<button id="btn_add">Add</button>
 			<!-- </form> -->
 		</div>
 		<footer>
@@ -341,32 +335,58 @@
 		<script>
 			function removeItem(item) {
 				item.parentNode.removeChild(item);
-			}
-			function readURL(input) {
-				if (input.files && input.files[0]) {
-					var reader = new FileReader();
-
-					reader.onload = function (e) {
-						$("#addimage").attr("src", e.target.result).width(150).height(200);
-					};
-
-					reader.readAsDataURL(input.files[0]);
 				}
+		// 		function readURL(input) {
+        //     if (input.files && input.files[0]) {
+        //         var reader = new FileReader();
+
+        //         reader.onload = function (e) {
+        //             $('#addimage')
+        //                 .attr('src', e.target.result)
+        //                 .width(150)
+        //                 .height(200);
+        //         };
+
+        //         reader.readAsDataURL(input.files[0]);
+        //     }
+        // }
+		document.querySelector("#myFileInput").addEventListener("change", function(){
+			const reader = new FileReader();
+
+			reader.addEventListener("load", () => {
+				localStorage.setItem("recent-image",reader.result)
+			})
+
+			reader.readAsDataURL(this.files[0])
+		})
+
+		document.addEventListener("DOMContentLoaded", () =>{
+			const recentImageDataUrl = localStorage.getItem("recent-image")
+
+			if(recentImageDataUrl) {
+				document.querySelector("#imgPreview").setAttribute("src", recentImageDataUrl)
 			}
+		})
+				$(document).ready(function() {
 
-			$(document).ready(function () {
-				$("#btn_add").click(function () {
-					let fileList = ximage.files;
-					let newitem = document.getElementById("ItemName").value;
-					let newprice = document.getElementById("ItemPrice").value;
-					let newimage = fileList;
-					let node = document.createElement("th");
-					//gives new list item the id of text
-					node.setAttribute("id", "text");
-					//adds the list item to the ul tag
-					document.querySelector("table").appendChild(node);
+$("#btn_add").click(function() {
+	
+	let newitem = document.getElementById('ItemName').value
+	let newprice = document.getElementById('ItemPrice').value
+	let newimage = localStorage.getItem('recent-image')
+	let node = document.createElement('th');
+   //gives new list item the id of text
+   //node.setAttribute('id', "text")
+   //adds the list item to the ul tag
+   //document.querySelector('table').appendChild(node);
 
-					document.getElementById("text").innerHTML = newitem;
+	//document.getElementById("text").innerHTML = newitem
+  
+	
+ $("#menutable").append("<th><div class='item' id='item21'> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem(item21)'>Remove</button></div></th>");
+});	
+})
+;
 
 					console.log(newitem);
 					console.log(newprice);
@@ -378,8 +398,8 @@
 							newprice +
 							"</p></div><img src='' class='images' /><button class='itembtn' onclick='removeItem(item21)'>Remove</button></div></th>"
 					);
-				});
-			});
+				
 		</script>
 	</body>
 </html>
+

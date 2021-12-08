@@ -90,6 +90,7 @@ let counter = 0;
 let P = 0;
 let oldCounter = 0;
 let totalCost = 0;
+
 function addToCart(clicked) {
 	rewardsPoints = rewardsPoints + items_array[clicked].points;
 	let node = document.createElement("li");
@@ -107,21 +108,25 @@ function addToCart(clicked) {
 	);
 
 	if (items_array[clicked].num > 0) {
+        let itemPrice = items_array[clicked].Price * items_array[clicked].num
 		document.getElementById("F").innerHTML =
 			items_array[clicked].num +
 			" " +
 			items_array[clicked].Name +
 			" $" +
-			items_array[clicked].Price * items_array[clicked].num;
+			itemPrice.toFixed(2);
 		totalCost = totalCost + items_array[clicked].Price;
-		document.getElementById("totalPrice").innerHTML = totalCost;
-
-		if (rewardsPoints >= 100) {
-			totalCost = totalCost / 10;
-			document.getElementById("totalPrice").innerHTML = totalCost;
-			console.log(totalCost);
-		}
+		document.getElementById("totalPrice").innerHTML = totalCost.toFixed(2);
 	}
+    
+    var completedOrder = false;
+}
+
+function rewardsDiscount(orderPrice) {
+    if(completedOrder == true) {
+        orderPrice = orderPrice * 0.9;
+        rewardsPoints = rewardsPoints - 100;
+    }
 }
 
 // add id="21" to custom sushi element
