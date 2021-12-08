@@ -18,16 +18,14 @@ $(document).ready(function () {
 
 	$("#submit").click(function () {
 		let curretStorage = JSON.parse(localStorage.getItem("users"));
-	 	if (
-		$("#username").val() == "admin" &&
-		$("#email").val() == "admin"
-		) { window.location.href = "ManagerPage.html" }
-		else if (curretStorage == null) {
+		if ($("#username").val() == "admin" && $("#email").val() == "admin") {
+			window.location.href = "ManagerPage.html";
+		} else if (curretStorage == null) {
 			const newUser = {
 				userName: $("#username").val(),
 				email: $("#email").val(),
 			};
-			console.log("ah;dfjkalhldsf")
+			console.log("ah;dfjkalhldsf");
 			localStorage.setItem("users", JSON.stringify(newUser));
 			window.location.href = "HomePage.html";
 		} else if (
