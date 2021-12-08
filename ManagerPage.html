@@ -35,7 +35,7 @@
 								<p class="price">9.99</p>
 							</div>
 							<img src="images/dragon.jfif" class="images" />
-							<button class="itembtn" onclick="removeItem(item1)" id="1">
+							<button class="itembtn" onclick="removeItem(item1)">
 								Remove
 							</button>
 						</div>
@@ -47,7 +47,7 @@
 								<p class="price">7.99</p>
 							</div>
 							<img src="images/cheeseburger.png" class="images" />
-							<button class="itembtn" onclick="removeItem(item2)" id="2">
+							<button class="itembtn" onclick="removeItem(item2)">
 								Remove
 							</button>
 						</div>
@@ -310,6 +310,7 @@
 				document.querySelector("#imgPreview").setAttribute("src", recentImageDataUrl)
 			}
 		})
+		let itemnum = 20
 				$(document).ready(function() {
 
 $("#btn_add").click(function() {
@@ -318,15 +319,20 @@ $("#btn_add").click(function() {
 	let newprice = document.getElementById('ItemPrice').value
 	let newimage = localStorage.getItem('recent-image')
 	let node = document.createElement('th');
+	itemnum = itemnum+1
+	if(itemnum>24){
+		$("#menutable").append("<tr><th><div class='item' id="+itemnum+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem("+itemnum+")'>Remove</button></div></th></tr>")
+	}
+	else{
+		$("#menutable").append("<th><div class='item' id="+itemnum+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem("+itemnum+")'>Remove</button></div></th>")
+	}
+	console.log(itemnum)
    //gives new list item the id of text
    //node.setAttribute('id', "text")
    //adds the list item to the ul tag
    //document.querySelector('table').appendChild(node);
 
 	//document.getElementById("text").innerHTML = newitem
-  
-	
- $("#menutable").append("<th><div class='item' id='item21'> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem(item21)'>Remove</button></div></th>");
 });	
 })
 ;
