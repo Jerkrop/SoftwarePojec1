@@ -319,11 +319,11 @@ $("#btn_add").click(function() {
 	let newimage = localStorage.getItem('recent-image')
 	let node = document.createElement('th');
    //gives new list item the id of text
-   node.setAttribute('id', "text")
+   //node.setAttribute('id', "text")
    //adds the list item to the ul tag
-   document.querySelector('table').appendChild(node);
+   //document.querySelector('table').appendChild(node);
 
-	document.getElementById("text").innerHTML = newitem
+	//document.getElementById("text").innerHTML = newitem
   
 	
  $("#menutable").append("<th><div class='item' id='item21'> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem(item21)'>Remove</button></div></th>");
@@ -334,3 +334,4 @@ $("#btn_add").click(function() {
 		</script>
 	</body>
 </html>
+
