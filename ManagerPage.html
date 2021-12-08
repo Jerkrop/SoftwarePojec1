@@ -279,6 +279,9 @@
 			function removeItem(item){
 				item.parentNode.removeChild(item);
 				}
+				function removeNewItem(itemnum){
+					itemnum.parentNode.removeChild(itemnum)
+				}
 		// 		function readURL(input) {
         //     if (input.files && input.files[0]) {
         //         var reader = new FileReader();
@@ -321,10 +324,10 @@ $("#btn_add").click(function() {
 	let node = document.createElement('th');
 	itemnum = itemnum+1
 	if(itemnum>24){
-		$("#menutable").append("<tr><th><div class='item' id="+itemnum+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem("+itemnum+")'>Remove</button></div></th></tr>")
+		$("#menutable").append("<tr><th><div class='item' id="+itemnum+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeNewItem("+itemnum+")'>Remove</button></div></th></tr>")
 	}
 	else{
-		$("#menutable").append("<th><div class='item' id="+itemnum+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem("+itemnum+")'>Remove</button></div></th>")
+		$("#menutable").append("<th><div class='item' id="+itemnum+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeNewItem("+itemnum+")'>Remove</button></div></th>")
 	}
 	console.log(itemnum)
    //gives new list item the id of text
