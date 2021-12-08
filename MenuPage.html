@@ -1,31 +1,6 @@
+
 <html>
 	<head>
-		<script>
-			let dragonSushi = { name: "dragon sushi", id: 1, count: 1, price: 5 };
-			let CheeseburgerSushi = {
-				name: "Cheeseburger Sushi",
-				id: 2,
-				count: 1,
-				price: 5,
-			};
-
-			const items_array = [dragonSushi, CheeseburgerSushi];
-
-			let cart = [];
-
-			function addToCart(btn) {
-				for (let i = 0; i < items_array.length; i++) {
-					var objID = cart[i].id;
-					console.log(objID);
-					console.log(btn.id);
-					if (btn.id == objID) {
-						cart.push(cart[i]);
-					}
-				}
-				console.log(cart);
-			}
-
-		</script>
 
 		<title>Samurai Sushi - Menu</title>
 		<link rel="stylesheet" href="./MenuPage.css" />
@@ -270,12 +245,14 @@
 		</div>
 
 		<div class="cart">
-			<h1>This is Your Order</h1>
-        	<p id="F"></p>
+
+			<h1>corfirm selection?</h1>
+        <p id="F"></p>
 		  <ul id="cartItems">
 			  
 		  </ul>
-		  <button type="button">confirm</button>
+		  <p id="totalCosts">Total price: <span id="totalPrice"></span></p>
+			<button type="button">Buy</button>
 		</div>
 
 <div class="myosushi">
