@@ -1,31 +1,6 @@
+
 <html>
 	<head>
-		<script>
-			let dragonSushi = { name: "dragon sushi", id: 1, count: 1, price: 5 };
-			let CheeseburgerSushi = {
-				name: "Cheeseburger Sushi",
-				id: 2,
-				count: 1,
-				price: 5,
-			};
-
-			const items_array = [dragonSushi, CheeseburgerSushi];
-
-			let cart = [];
-
-			function addToCart(btn) {
-				for (let i = 0; i < items_array.length; i++) {
-					var objID = cart[i].id;
-					console.log(objID);
-					console.log(btn.id);
-					if (btn.id == objID) {
-						cart.push(cart[i]);
-					}
-				}
-				console.log(cart);
-			}
-
-		</script>
 
 		<title>Samurai Sushi - Menu</title>
 		<link rel="stylesheet" href="./MenuPage.css" />
@@ -59,7 +34,7 @@
 								<p class="price">$9.99</p>
 							</div>
 							<img src="images/dragon.jfif" class="images" />
-							<button class="itembtn add" onclick="addToCart(this)" id="1">
+							<button class="itembtn add" onclick="addToCart(this.id)" id="0">
 								Add to cart
 							</button>
 						</div>
@@ -71,7 +46,7 @@
 								<p class="price">$7.99</p>
 							</div>
 							<img src="images/cheeseburger.png" class="images" />
-							<button class="itembtn add" onclick="addToCart(this)" id="2">
+							<button class="itembtn add" onclick="addToCart(this.id)" id="1">
 								Add to cart
 							</button>
 						</div>
@@ -83,7 +58,7 @@
 								<p class="price">$8.99</p>
 							</div>
 							<img src="images/maki.jfif" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="2">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -93,7 +68,7 @@
 								<p class="price">$9.99</p>
 							</div>
 							<img src="images/temaki.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="3">Add to cart</button>
 						</div>
 					</th>
 				</tr>
@@ -105,7 +80,7 @@
 								<p class="price">$10.99</p>
 							</div>
 							<img src="images/uramaki.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="4">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -115,7 +90,7 @@
 								<p class="price">$7.99</p>
 							</div>
 							<img src="images/tiger.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="5">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -125,7 +100,7 @@
 								<p class="price">$6.99</p>
 							</div>
 							<img src="images/phil.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="6">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -135,7 +110,7 @@
 								<p class="price">$9.99</p>
 							</div>
 							<img src="images/crunch.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="7">Add to cart</button>
 						</div>
 					</th>
 				</tr>
@@ -147,7 +122,7 @@
 								<p class="price">$8.99</p>
 							</div>
 							<img src="images/dynamite.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="8">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -157,7 +132,7 @@
 								<p class="price">$9.99</p>
 							</div>
 							<img src="images/rainbow.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="9">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -167,7 +142,7 @@
 								<p class="price">$11.99</p>
 							</div>
 							<img src="images/surfnturf.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="10">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -177,7 +152,7 @@
 								<p class="price">$7.99</p>
 							</div>
 							<img src="images/volcano.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="11">Add to cart</button>
 						</div>
 					</th>
 				</tr>
@@ -189,7 +164,7 @@
 								<p class="price">$10.99</p>
 							</div>
 							<img src="images/taco.png" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="12">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -199,7 +174,7 @@
 								<p class="price">$8.99</p>
 							</div>
 							<img src="images/spicytuna.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="13">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -209,7 +184,7 @@
 								<p class="price">$11.99</p>
 							</div>
 							<img src="images/shrimp.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="14">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -219,7 +194,7 @@
 								<p class="price">$9.99</p>
 							</div>
 							<img src="images/spider.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="15">Add to cart</button>
 						</div>
 					</th>
 				</tr>
@@ -231,7 +206,7 @@
 								<p class="price">$10.99</p>
 							</div>
 							<img src="images/lobster.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="16">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -241,7 +216,7 @@
 								<p class="price">$12.99</p>
 							</div>
 							<img src="images/blob.jfif" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="17">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -251,7 +226,7 @@
 								<p class="price">$6.99</p>
 							</div>
 							<img src="images/jelly.jfif" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="18">Add to cart</button>
 						</div>
 					</th>
 					<th>
@@ -261,7 +236,7 @@
 								<p class="price">$15.99</p>
 							</div>
 							<img src="images/vegan.jpg" class="images" />
-							<button class="itembtn add">Add to cart</button>
+							<button class="itembtn add" onclick="addToCart(this.id)" id="19">Add to cart</button>
 						</div>
 					</th>
 				</tr>
@@ -270,12 +245,14 @@
 		</div>
 
 		<div class="cart">
-			<h1>This is Your Order</h1>
-        	<p id="F"></p>
+
+			<h1>corfirm selection?</h1>
+        <p id="F"></p>
 		  <ul id="cartItems">
 			  
 		  </ul>
-		  <button type="button">confirm</button>
+		  <p id="totalCosts">Total price: <span id="totalPrice"></span></p>
+			<button type="button">Buy</button>
 		</div>
 
 <div class="myosushi">
