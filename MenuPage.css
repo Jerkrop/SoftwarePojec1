@@ -238,8 +238,8 @@ footer ul li div a:hover {
 	color: goldenrod;
 	display: flex;
 	flex-direction: column;
-	margin-left: 450px;
-	margin-right: 450px;
+	margin-left: 30%;
+	margin-right: 30%;
 	padding: 10px;
 }
 
