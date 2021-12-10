@@ -1,6 +1,15 @@
-function removeItem(item) {
-				item.parentNode.removeChild(item);
+let itemnum = 20
+function removeItem(y) {
+			let z = y+"+1"
+			document.getElementById(z).remove()
+			itemnum = itemnum-1
 				}
+				// function removeNewItem(y){
+				
+				// y.remove()
+				// }
+				
+
 				
 		// 		function readURL(input) {
         //     if (input.files && input.files[0]) {
@@ -33,7 +42,7 @@ function removeItem(item) {
 			// 	document.querySelector("#imgPreview").setAttribute("src", recentImageDataUrl)
 			// }
 		})
-		let itemnum = 20
+		
 				$(document).ready(function() {
 
 $("#btn_add").click(function() {
@@ -42,14 +51,15 @@ $("#btn_add").click(function() {
 	let newimage = localStorage.getItem('recent-image')
 	let node = document.createElement('th');
 	itemnum = itemnum+1
-	if(itemnum>24){
-		$("#menutable").append("<tr><th><div class='item' id="+itemnum+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem("+itemnum+")'>Remove</button></div></th></tr>")
+	let newid = 'item'+itemnum
+	if(itemnum===25||itemnum===29||itemnum===33){
+		$("#menutable").append("<tr><th><div class='item' id="+newid+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem(this.id)'>Remove</button></div></th></tr>")
+		
 	}
 	else{
-		$("#menutable").append("<th><div class='item' id="+itemnum+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem("+itemnum+")'>Remove</button></div></th>")
+		$("#menutable").append("<th><div class='item' id="+newid+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' onclick='removeItem(this.id)'>Remove</button></div></th>")
+		
 	}
-	var elem = document.querySelector('#itemnum');
-				elem.parentNode.removeChild(elem);
 	console.log(newitem)
 	console.log(newprice)
 	console.log(itemnum)
