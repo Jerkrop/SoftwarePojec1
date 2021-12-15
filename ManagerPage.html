@@ -2,9 +2,20 @@
 	<head>
 		<title>Manager Page</title>
 		<link rel="stylesheet" href="./MenuPage.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Sans+JP&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			class="jsbin"
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+		></script>
+		<script
+			class="jsbin"
+			src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+		></script>
 	</head>
 	<body>
 		<div class="nav">
@@ -16,246 +27,302 @@
 			</ul>
 		</div>
 		<div class="top">
-			<img src=images/logo1.png class="logo">
+			<div id="topLogo"><img src=images/logo1.png class="logo"></div>
 			<h2 class="header">Manager Page</h2>
 		</div>
 		<br />
 		<div id="menu">
-			<table>
+			<table id="menutable">
 				<tr>
 					<th>
-						<div class="item" id="item1">
+						<div class="item" id="item1+1">
 							<div class="itemtop">
 								<p class="itemtext">Dragon Sushi</p>
 								<p class="price">9.99</p>
 							</div>
 							<img src="images/dragon.jfif" class="images" />
-							<button class="itembtn" onclick="removeItem()" id="1">
+							<button class="itembtn" id="item1" onclick="removeItem(this.id)">
 								Remove
 							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item" id="item2">
+						<div class="item" id="item2+1">
 							<div class="itemtop">
 								<p class="itemtext">Cheeseburger Sushi</p>
 								<p class="price">7.99</p>
 							</div>
 							<img src="images/cheeseburger.png" class="images" />
-							<button class="itembtn" onclick="removeItem()" id="2">
+							<button class="itembtn" id="item2" onclick="removeItem(this.id)">
 								Remove
 							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item" id="item3">
+						<div class="item" id="item3+1">
 							<div class="itemtop">
 								<p class="itemtext">Maki</p>
 								<p class="price">8.99</p>
 							</div>
 							<img src="images/maki.jfif" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item3" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item4+1">
 							<div class="itemtop">
 								<p class="itemtext">Temaki</p>
 								<p class="price">9.99</p>
 							</div>
 							<img src="images/temaki.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item4" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 				</tr>
 				<tr>
 					<th>
-						<div class="item">
+						<div class="item" id="item5+1">
 							<div class="itemtop">
 								<p class="itemtext">Uramaki</p>
 								<p class="price">10.99</p>
 							</div>
 							<img src="images/uramaki.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item5" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item6+1">
 							<div class="itemtop">
 								<p class="itemtext">Tiger Roll</p>
 								<p class="price">7.99</p>
 							</div>
 							<img src="images/tiger.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item6" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item7+1">
 							<div class="itemtop">
 								<p class="itemtext">Philadelphia Roll</p>
 								<p class="price">6.99</p>
 							</div>
 							<img src="images/phil.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item7" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item8+1">
 							<div class="itemtop">
 								<p class="itemtext">Crunch Roll</p>
 								<p class="price">9.99</p>
 							</div>
 							<img src="images/crunch.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item8" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 				</tr>
 				<tr>
 					<th>
-						<div class="item">
+						<div class="item" id="item9+1">
 							<div class="itemtop">
 								<p class="itemtext">Dynamite Roll</p>
 								<p class="price">8.99</p>
 							</div>
 							<img src="images/dynamite.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item9" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item10+1">
 							<div class="itemtop">
 								<p class="itemtext">Rainbow Roll</p>
 								<p class="price">9.99</p>
 							</div>
 							<img src="images/rainbow.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item10" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item11+1">
 							<div class="itemtop">
 								<p class="itemtext">Surf and Turf</p>
 								<p class="price">11.99</p>
 							</div>
 							<img src="images/surfnturf.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item11" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item12+1">
 							<div class="itemtop">
 								<p class="itemtext">Volcano Roll</p>
 								<p class="price">7.99</p>
 							</div>
 							<img src="images/volcano.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item12" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 				</tr>
 				<tr>
 					<th>
-						<div class="item">
+						<div class="item" id="item13+1">
 							<div class="itemtop">
 								<p class="itemtext">Sushi Taco</p>
 								<p class="price">10.99</p>
 							</div>
 							<img src="images/taco.png" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item13" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item14+1">
 							<div class="itemtop">
 								<p class="itemtext">Spicy Tuna Roll</p>
 								<p class="price">8.99</p>
 							</div>
 							<img src="images/spicytuna.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item14" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item15+1">
 							<div class="itemtop">
 								<p class="itemtext">Shrimp Roll</p>
 								<p class="price">11.99</p>
 							</div>
 							<img src="images/shrimp.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item15" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item16+1">
 							<div class="itemtop">
 								<p class="itemtext">Spider Roll</p>
 								<p class="price">9.99</p>
 							</div>
 							<img src="images/spider.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item16" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 				</tr>
 				<tr>
 					<th>
-						<div class="item">
+						<div class="item" id="item17+1">
 							<div class="itemtop">
 								<p class="itemtext">Lobster Roll</p>
 								<p class="price">10.99</p>
 							</div>
 							<img src="images/lobster.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item17" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item18+1">
 							<div class="itemtop">
 								<p class="itemtext">Blob Fish Roll</p>
 								<p class="price">12.99</p>
 							</div>
 							<img src="images/blob.jfif" class="images" />
-							<button class="itembtn" onclick="removeItem()">Remove</button>
+							<button class="itembtn" id="item18" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item19+1">
 							<div class="itemtop">
 								<p class="itemtext">Jelly Fish Roll</p>
 								<p class="price">6.99</p>
 							</div>
 							<img src="images/jelly.jfif" class="images" />
-							<button class="itembtn" onclick="removeItem(this)">Remove</button>
+							<button class="itembtn" id="item19" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item20+1">
 							<div class="itemtop">
 								<p class="itemtext">Vegan Roll</p>
 								<p class="price">15.99</p>
 							</div>
 							<img src="images/vegan.jpg" class="images" />
-							<button class="itembtn" onclick="removeItem(this)">Remove</button>
+							<button class="itembtn" id="item20" onclick="removeItem(this.id)">
+								Remove
+							</button>
 						</div>
 					</th>
 				</tr>
 			</table>
 		</div>
-		<div id="customSushi">
-			<a href="MakeYourOwn.html">Make Your Own Sushi</a>
-			<p>
-				Click here to create your own sushi roll! Choose from our many fresh
-				ingredients to make the sushi roll for you!
-			</p>
+		<div id="additem">
+			<p>Add new item</p>
+			<input type="text" id="ItemName" placeholder="Enter item name" />
+			<input type="text" id="ItemPrice" placeholder="Enter item price" />
+			<!-- <form> -->
+				<input  type='file' accept="image/*" id="myFileInput"/>
+				
+				<button id="btn_add">Add</button>
+			<!-- </form> -->
+		</div>
+		<div>
+			<button class="sushiButton"onclick="clearStorage()" style="margin-left: 25%;">Clear storage</button>
 		</div>
 		<footer>
 			<img src="images/New_Project_1.png" />
 			<ul>
 				<li>
-					<div id="insta"><a target="_blank" href="http://www.instagram.com/_samurai_sushi_real/"><ion-icon name="logo-instagram"></ion-icon></a></div>
+					<div id="insta">
+						<a
+							target="_blank"
+							href="http://www.instagram.com/_samurai_sushi_real/"
+							><ion-icon name="logo-instagram"></ion-icon
+						></a>
+					</div>
 				</li>
 				<li>
-					<div id="insta"><ion-icon name="logo-youtube"></ion-icon></div>
+					<div id="youtube">
+						<a target="_blank" href="http://www.youtube.com"
+							><ion-icon name="logo-youtube"></ion-icon
+						></a>
+					</div>
 				</li>
 				<li>
-					<div id="insta"><ion-icon name="logo-twitter"></ion-icon></div>
+					<div id="twitter">
+						<a target="_blank" href="http://www.twitter.com"
+							><ion-icon name="logo-twitter"></ion-icon
+						></a>
+					</div>
 				</li>
 			</ul>
 		</footer>
@@ -267,13 +334,6 @@
 			nomodule
 			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
 		></script>
-		<script>
-			function removeItem(){
-				const item = document.querySelectorAll('item')  
-for (const el of item) {  
-  el.remove();  
-}
-			}
-		</script>
+		<script src="ManagerPage.js"></script>
 	</body>
 </html>

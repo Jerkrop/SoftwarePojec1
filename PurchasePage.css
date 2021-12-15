@@ -1,30 +1,41 @@
+
 * {
 	margin: 0;
 	padding: 0;
 }
+
 .flex-container {
 	text-align: center;
 	background-color: grey;
 	text-decoration: none;
 	width: 50%;
-	height: 101.5%;
-	margin-left: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	border-radius: 10px;
 	font-size: xx-large;
 	font-family: "Cinzel", serif;
 }
-h2 {
-	color: #8F1418;
-	background-color: black;
-	font-family: "Cinzel", serif;
+
+.flex-container ol li:hover {
+	color: goldenrod;
 }
+
+h2 {
+	color: black;
+	background-color: #8f1418;
+	font-family: "Cinzel", serif;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
 ol {
 	margin-left: 200px;
 }
+
 body {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("images/hero2.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-image: url('https://rbsushi.com/wp-content/uploads/2019/10/rbushi_bg_01.png');
+	background-repeat: repeat;
 }
 
 .nav {
@@ -32,9 +43,9 @@ body {
 	padding-top: 2vh;
 	padding-bottom: 2vh;
 	text-align: center;
+	font-family: "Cinzel", serif;
 	background-color: black;
 	overflow: hidden;
-	margin-bottom: 5vh;
 }
 
 .nav ul li {
@@ -44,16 +55,16 @@ body {
 
 .nav ul li a {
 	text-decoration: none;
-	color: #8F1418;
-	font-size: 20px;
+	color: #8f1418;
+	font-size: 25px;
 }
 
 .nav ul li a:hover {
-  color: goldenrod;
+	color: goldenrod;
 }
 
 footer {
-	background-color: #8F1418;
+	background-color: #8f1418;
 	color: black;
 	width: 100%;
 	height: 200px;
@@ -66,8 +77,8 @@ footer img {
 }
 
 footer ul {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 footer ul li {
@@ -82,30 +93,47 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-  color: black;
+	color: black;
 }
 
 .navbottom {
-	background: #8F1418;
+	background: #8f1418;
 	width: 100%;
-	 padding-top: 2vh;
-	 padding-bottom: 2vh;
-	 text-align: center;
-	 position: absolute;
-	 overflow: hidden;
- }
- 
- .navbottom ul li {
-	 display: inline;
-	 padding: 20px;
- }
- 
- .navbottom ul li a {
-	 text-decoration: none;
-	 font-size: 20px;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	text-align: center;
+	position: absolute;
+	overflow: hidden;
+}
+
+.navbottom ul li {
+	display: inline;
+	padding: 20px;
+}
+
+.navbottom ul li a {
+	text-decoration: none;
+	font-size: 20px;
 	color: black;
- }
- 
- .navbottom ul a:hover {
+}
+
+.navbottom ul a:hover {
 	color: goldenrod;
  }
+
+ .top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0%;
+}
+
+.logo {
+	width: 30%;
+}
+
+#topLogo {
+	background-color: #8F1418;
+	width: 100%;
+	text-align: center;
+}
