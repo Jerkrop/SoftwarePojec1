@@ -14,7 +14,7 @@ function removeItem(y) {
 				}
 			function removeAppendedItem(){
 				var elem = document.querySelector("#item21");
-				elem.style.display="none"
+				elem.remove(elem)
 			}
 				// $(function() {
 
@@ -90,7 +90,9 @@ $("#btn_add").click(function() {
 	// else{
 		$("#menutable").append("<th><div class='item' id="+newid+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' id="+newid+" onclick='removeAppendedItem("+this.id+")'>Remove</button></div></th>")
 	//}
-	
+	localStorage.setItem('newitemname', newitem)
+	localStorage.setItem('newitemprice',newprice)
+	localStorage.setItem('item21','true')
 	console.log(newitem)
 	console.log(newprice)
 	console.log(itemnum)
