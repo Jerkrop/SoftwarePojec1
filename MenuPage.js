@@ -1,5 +1,13 @@
 let rewardsPoints = 0
+let newitemname = localStorage.getItem('newitemname')
+let newitemprice = localStorage.getItem('newitemprice')
+let newitemimage = localStorage.getItem('recent-image')
+let item21 = localStorage.getItem('item21')
 
+console.log(newitemname)
+console.log(newitemprice)
+console.log(newitemimage)
+console.log(item21)
 
 
 const dragonSushi ={Name:"dragon Sushi", Price:9.99, num:0, points: 10}
@@ -23,7 +31,7 @@ const BlobFishRoll= {Name:"BlobFish Roll", Price:12.99, num:0, points: 13}
 const JellyFishRoll={Name:"JellyFish Roll", Price:6.99, num:0, points: 7}
 const VeganRoll= {Name:"Vegan Roll", Price:15.99, num:0, points: 16}
 const customsushi = {Name:"custom Sushi", Price:8.99, num:0, points: 9}
-
+const newitem = {Name:newitemname, Price:newitemprice, num:0, points: 10}
 
 
 const items_array = [
@@ -47,7 +55,8 @@ const items_array = [
     BlobFishRoll,
     JellyFishRoll,
     VeganRoll,
-    customsushi
+    customsushi,
+    newitem
 ];
 
 let cart = [ ];
@@ -124,6 +133,10 @@ if(localStorage.getItem('item19') === 'hide') {
 if(localStorage.getItem('item20') === 'hide') {
     $('#item20').hide();
 };
+
+if(localStorage.getItem('item21')==='true'){
+    $('#newrow').append('<th><div class="item" id="item21"><div class="itemtop"><p class="itemtext">'+newitemname+'</p><p class="price">'+newitemprice+'</p></div><img src='+newitemimage+' class="images" alt="" title=""/><button class="itembtn add" onclick="addToCart(this.id)" id="21">Add to cart</button></div></th>')
+}
 
 
 let counter = 0;
