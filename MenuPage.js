@@ -90,43 +90,61 @@ let counter = 0;
 let P = 0;
 let oldCounter = 0;
 let totalCost = 0;
+let itemId = 0;
 
 function addToCart(clicked) {
-	rewardsPoints = rewardsPoints + items_array[clicked].points;
-	let node = document.createElement("li");
-	console.log(rewardsPoints);
-	//defines variable txt
-
-	//adds the list item to the ul tag
-	document.getElementById("cartItems").appendChild(node);
-
 	items_array[clicked].num = items_array[clicked].num + 1;
-	console.log(
-		items_array[clicked].Name +
-			" " +
-			items_array[clicked].Price * items_array[clicked].num
-	);
-
-	if (items_array[clicked].num > 0) {
-        let itemPrice = items_array[clicked].Price * items_array[clicked].num
-		document.getElementById("F").innerHTML =
-			items_array[clicked].num +
-			" " +
-			items_array[clicked].Name +
-			" $" +
-			itemPrice.toFixed(2);
+	let itemPrice = items_array[clicked].Price * items_array[clicked].num;
+	let txt =
+	items_array[clicked].num +
+	" " +
+	items_array[clicked].Name +
+	" $" +
+	itemPrice.toFixed(2);
+	//checking to see if the item already exist in the cart and adding it if it doesn't
+	if (cart.indexOf(items_array[clicked]) == -1) {
+		itemId = parseInt(itemId);
+		itemId = itemId + 1
+		itemId = itemId.toString();
+		console.log(cart)
+		cart.push(items_array[clicked])
+		console.log("The item doesnt exist in the cart")
+		rewardsPoints = rewardsPoints + items_array[clicked].points;
+		let node = document.createElement("li");
+		node.setAttribute("id", "text");
+		document.getElementById("cartItems").appendChild(node);
+		document.getElementById("text").innerHTML = txt;
+		document.getElementById("text").removeAttribute("id");
+		node.setAttribute("id", itemId);
 		totalCost = totalCost + items_array[clicked].Price;
 		document.getElementById("totalPrice").innerHTML = totalCost.toFixed(2);
 	}
-    
-    var completedOrder = false;
+	//changing the quantity of an item if it's already in the cart
+	else {
+		for (var i = 0; i < cart.length; i++) {
+			if (cart[i] == items_array[clicked]) {
+				let stringI = toString(i)
+				let test = document.getElementById(stringI)
+				console.log(test)
+				txt = items_array[clicked].num +
+				" " +
+				items_array[clicked].Name +
+				" $" +
+				itemPrice.toFixed(2);
+				// console.log(document.getElementsByClassName(stringI).innerHTML)
+				document.getElementById(stringI).innerHTML = txt
+			}
+		}
+	}
+
+	var completedOrder = false;
 }
 
 function rewardsDiscount(orderPrice) {
-    if(completedOrder == true) {
-        orderPrice = orderPrice * 0.9;
-        rewardsPoints = rewardsPoints - 100;
-    }
+	if (completedOrder == true) {
+		orderPrice = orderPrice * 0.9;
+		rewardsPoints = rewardsPoints - 100;
+	}
 }
 
 // add id="21" to custom sushi element
