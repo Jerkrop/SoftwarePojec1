@@ -12,6 +12,10 @@ function removeItem(y) {
 				console.log(y)
 			}
 				}
+			function removeAppendedItem(){
+				var elem = document.querySelector("#item21");
+				elem.style.display="none"
+			}
 				// $(function() {
 
 				// 	// When sign-up-but clicked, use localStorage to remember to hide
@@ -76,17 +80,16 @@ $("#btn_add").click(function() {
 	let newitem = document.getElementById('ItemName').value
 	let newprice = document.getElementById('ItemPrice').value
 	let newimage = localStorage.getItem('recent-image')
-	let node = document.createElement('th');
+	
 	itemnum = itemnum+1
 	let newid = 'item'+itemnum
-	if(itemnum===25||itemnum===29||itemnum===33){
-		$("#menutable").append("<tr><th><div class='item' id="+newid+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' id="+newid+" >Remove</button></div></th></tr>")
+	// if(itemnum===25||itemnum===29||itemnum===33){
+	// 	$("#menutable").append("<tr><th><div class='item' id="+newid+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' id="+newid+" onclick='removeItem("+this.id+")'>Remove</button></div></th></tr>")
 		
-	}
-	else{
-		$("#menutable").append("<th><div class='item' id="+newid+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' id="+newid+" >Remove</button></div></th>")
-		
-	}
+	// }
+	// else{
+		$("#menutable").append("<th><div class='item' id="+newid+"> <div class='itemtop'><p class='itemtext'>" + newitem +"</p><p class='price'>"+newprice+"</p></div><img src="+newimage+" class='images' /><button class='itembtn' id="+newid+" onclick='removeAppendedItem("+this.id+")'>Remove</button></div></th>")
+	//}
 	
 	console.log(newitem)
 	console.log(newprice)
