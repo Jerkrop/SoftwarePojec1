@@ -238,8 +238,8 @@ footer ul li div a:hover {
 	color: goldenrod;
 	display: flex;
 	flex-direction: column;
-	margin-left: 450px;
-	margin-right: 450px;
+	margin-left: 30%;
+	margin-right: 30%;
 	padding: 10px;
 }
 
@@ -306,6 +306,32 @@ footer ul li div a:hover {
 }
 
 .cart button:hover{
+	background-color: goldenrod;
+	color: black;
+	letter-spacing: 3px;
+	border-color:darkred;
+	cursor: pointer;
+}
+
+.sushiButton{
+	width: 50%;
+	border-radius: 5px;
+	background-color: darkred;
+	color: goldenrod;
+	border: none;
+	font-size: 125%;
+	font-family: "Cinzel", serif;
+	font-weight: bold;
+	letter-spacing: 0;
+	transition: 0.3s;
+	margin: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+
+.sushiButton:hover{
 	background-color: goldenrod;
 	color: black;
 	letter-spacing: 3px;
