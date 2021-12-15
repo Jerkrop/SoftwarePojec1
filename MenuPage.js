@@ -59,7 +59,7 @@ const items_array = [
     newitem
 ];
 
-let cart = [ ];
+let cart = [];
 
 /*
 "dragonSushi",
@@ -147,45 +147,54 @@ let itemId = 0;
 
 function addToCart(clicked) {
 	items_array[clicked].num = items_array[clicked].num + 1;
+	console.log(items_array[clicked].num)
 	let itemPrice = items_array[clicked].Price * items_array[clicked].num;
 	let txt =
-	items_array[clicked].num +
-	" " +
-	items_array[clicked].Name +
-	" $" +
-	itemPrice.toFixed(2);
+		items_array[clicked].num +
+		" " +
+		items_array[clicked].Name +
+		" $" +
+		itemPrice.toFixed(2);
 	//checking to see if the item already exist in the cart and adding it if it doesn't
 	if (cart.indexOf(items_array[clicked]) == -1) {
 		itemId = parseInt(itemId);
-		itemId = itemId + 1
+		itemId = itemId + 1;
 		itemId = itemId.toString();
-		console.log(cart)
-		cart.push(items_array[clicked])
-		console.log("The item doesnt exist in the cart")
+		console.log(cart);
+		cart.push(items_array[clicked]);
+		console.log("The item doesnt exist in the cart");
 		rewardsPoints = rewardsPoints + items_array[clicked].points;
 		let node = document.createElement("li");
 		node.setAttribute("id", "text");
 		document.getElementById("cartItems").appendChild(node);
 		document.getElementById("text").innerHTML = txt;
 		document.getElementById("text").removeAttribute("id");
-		node.setAttribute("id", itemId);
+		node.setAttribute("id", "cartItem" + itemId);
 		totalCost = totalCost + items_array[clicked].Price;
-		document.getElementById("totalPrice").innerHTML = totalCost.toFixed(2);
+		document.getElementById("totalPrice").innerHTML = "$" + totalCost.toFixed(2);
+		document.getElementById("checkoutTotal").innerHTML = "$" + totalCost.toFixed(2);
 	}
 	//changing the quantity of an item if it's already in the cart
 	else {
 		for (var i = 0; i < cart.length; i++) {
+			console.log("test")
 			if (cart[i] == items_array[clicked]) {
-				let stringI = toString(i)
-				let test = document.getElementById(stringI)
+				// let stringI = toString(i)
+				// console.log(i)
+				let test = document.getElementById("cartItem" + (i + 1))
 				console.log(test)
-				txt = items_array[clicked].num +
-				" " +
-				items_array[clicked].Name +
-				" $" +
-				itemPrice.toFixed(2);
+				txt =
+					items_array[clicked].num +
+					" " +
+					items_array[clicked].Name +
+					" $" +
+					itemPrice.toFixed(2);
 				// console.log(document.getElementsByClassName(stringI).innerHTML)
-				document.getElementById(stringI).innerHTML = txt
+				document.getElementById("cartItem" + (i +1)).innerHTML = txt;
+				console.log(document.getElementById("cartItem" + (i +1)).innerHTML)
+				totalCost = totalCost + items_array[clicked].Price;
+				document.getElementById("totalPrice").innerHTML = "$" + totalCost.toFixed(2);
+				document.getElementById("checkoutTotal").innerHTML = "$" + totalCost.toFixed(2);
 			}
 		}
 	}
@@ -199,10 +208,3 @@ function rewardsDiscount(orderPrice) {
 		rewardsPoints = rewardsPoints - 100;
 	}
 }
-
-
-   
-
-     
-
-   

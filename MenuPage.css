@@ -12,10 +12,20 @@ body {
 	height: 200px;
 	width: 250px;
 }
-#menu {
+
+.centered {
 	display: flex;
 	justify-content: center;
+}
+
+#menu {
+	border: 2px solid #8f1418;
+	display: flex;
+	justify-content: center;
+	border-radius: 10px;
 	margin-bottom: 5vh;
+	background-color: #212121;
+	width: 70vw;
 }
 
 #menuHead {
@@ -33,7 +43,7 @@ body {
 .item {
 	display: flex;
 	flex-direction: column;
-	margin: 3vw;
+	margin: 2vw;
 	border: 1px solid black;
 	border-radius: 10px;
 	background-color: darkred;
@@ -198,7 +208,7 @@ footer ul li div a:hover {
 	color: rgb(184, 13, 13);
 	border: 2px solid darkred;
 	backdrop-filter: blur(10px);
-	margin-bottom: 5vw;
+	margin-bottom: 2vw;
 	text-align: center;
 	padding-top: 2vh;
 	padding-bottom: 2vh;
@@ -277,6 +287,7 @@ footer ul li div a:hover {
 }
 
 .cart{
+	width: 30vw;
 	backdrop-filter: blur(10px);
 	border: darkred 2px solid;
 	color: #8F1418;
@@ -337,4 +348,18 @@ footer ul li div a:hover {
 	letter-spacing: 3px;
 	border-color:darkred;
 	cursor: pointer;
+}
+
+#checkout {
+	color: rgb(184, 13, 13);
+	border: 2px solid darkred;
+	backdrop-filter: blur(10px);
+	width: 50vw;
+}
+
+#checkoutContainer {
+	width: 100vw;
+	height: auto;
+	display: flex;
+	justify-content: center;
 }
