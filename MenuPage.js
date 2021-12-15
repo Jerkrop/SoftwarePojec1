@@ -64,6 +64,66 @@ let cart = [ ];
 " ",
 
 */
+if(localStorage.getItem('item1') === 'hide') {
+    $('#item1').hide();
+};
+if(localStorage.getItem('item2') === 'hide') {
+    $('#item2').hide();
+};
+if(localStorage.getItem('item3') === 'hide') {
+    $('#item3').hide();
+};
+if(localStorage.getItem('item4') === 'hide') {
+    $('#item4').hide();
+};
+if(localStorage.getItem('item5') === 'hide') {
+    $('#item5').hide();
+};
+if(localStorage.getItem('item6') === 'hide') {
+    $('#item6').hide();
+};
+if(localStorage.getItem('item7') === 'hide') {
+    $('#item7').hide();
+};
+if(localStorage.getItem('item8') === 'hide') {
+    $('#item8').hide();
+};
+if(localStorage.getItem('item9') === 'hide') {
+    $('#item9').hide();
+};
+if(localStorage.getItem('item10') === 'hide') {
+    $('#item10').hide();
+};
+if(localStorage.getItem('item11') === 'hide') {
+    $('#item11').hide();
+};
+if(localStorage.getItem('item12') === 'hide') {
+    $('#item12').hide();
+};
+if(localStorage.getItem('item13') === 'hide') {
+    $('#item13').hide();
+};
+if(localStorage.getItem('item14') === 'hide') {
+    $('#item14').hide();
+};
+if(localStorage.getItem('item15') === 'hide') {
+    $('#item15').hide();
+};
+if(localStorage.getItem('item16') === 'hide') {
+    $('#item16').hide();
+};
+if(localStorage.getItem('item17') === 'hide') {
+    $('#item17').hide();
+};
+if(localStorage.getItem('item18') === 'hide') {
+    $('#item18').hide();
+};
+if(localStorage.getItem('item19') === 'hide') {
+    $('#item19').hide();
+};
+if(localStorage.getItem('item20') === 'hide') {
+    $('#item20').hide();
+};
 
 
 

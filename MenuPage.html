@@ -7,6 +7,14 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+		<script
+			class="jsbin"
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+		></script>
+		<script
+			class="jsbin"
+			src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+		></script>
 	</head>
 	<body>
 		<div class="nav">
@@ -28,7 +36,7 @@
 			<table>
 				<tr>
 					<th>
-						<div class="item">
+						<div class="item" id="item1">
 							<div class="itemtop">
 								<p class="itemtext">Dragon Sushi</p>
 								<p class="price">$9.99</p>
@@ -40,7 +48,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item2">
 							<div class="itemtop">
 								<p class="itemtext">Cheeseburger Sushi</p>
 								<p class="price">$7.99</p>
@@ -52,7 +60,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item3">
 							<div class="itemtop">
 								<p class="itemtext">Maki</p>
 								<p class="price">$8.99</p>
@@ -62,7 +70,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item4">
 							<div class="itemtop">
 								<p class="itemtext">Temaki</p>
 								<p class="price">$9.99</p>
@@ -74,7 +82,7 @@
 				</tr>
 				<tr>
 					<th>
-						<div class="item">
+						<div class="item" id="item5">
 							<div class="itemtop">
 								<p class="itemtext">Uramaki</p>
 								<p class="price">$10.99</p>
@@ -84,7 +92,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item6">
 							<div class="itemtop">
 								<p class="itemtext">Tiger Roll</p>
 								<p class="price">$7.99</p>
@@ -94,7 +102,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item7">
 							<div class="itemtop">
 								<p class="itemtext">Philadelphia Roll</p>
 								<p class="price" onclick="addToCart(this)">$6.99</p>
@@ -104,7 +112,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item8">
 							<div class="itemtop">
 								<p class="itemtext">Crunch Roll</p>
 								<p class="price">$9.99</p>
@@ -116,7 +124,7 @@
 				</tr>
 				<tr>
 					<th>
-						<div class="item">
+						<div class="item" id="item9">
 							<div class="itemtop">
 								<p class="itemtext">Dynamite Roll</p>
 								<p class="price">$8.99</p>
@@ -126,7 +134,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item10">
 							<div class="itemtop">
 								<p class="itemtext">Rainbow Roll</p>
 								<p class="price">$9.99</p>
@@ -136,7 +144,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item11">
 							<div class="itemtop">
 								<p class="itemtext">Surf and Turf</p>
 								<p class="price">$11.99</p>
@@ -146,7 +154,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item12">
 							<div class="itemtop">
 								<p class="itemtext">Volcano Roll</p>
 								<p class="price">$7.99</p>
@@ -158,7 +166,7 @@
 				</tr>
 				<tr>
 					<th>
-						<div class="item">
+						<div class="item" id="item13">
 							<div class="itemtop">
 								<p class="itemtext">Sushi Taco</p>
 								<p class="price">$10.99</p>
@@ -168,7 +176,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item14">
 							<div class="itemtop">
 								<p class="itemtext">Spicy Tuna Roll</p>
 								<p class="price">$8.99</p>
@@ -178,7 +186,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item15">
 							<div class="itemtop">
 								<p class="itemtext">Shrimp Roll</p>
 								<p class="price">$11.99</p>
@@ -188,7 +196,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item16">
 							<div class="itemtop">
 								<p class="itemtext">Spider Roll</p>
 								<p class="price">$9.99</p>
@@ -200,7 +208,7 @@
 				</tr>
 				<tr>
 					<th>
-						<div class="item">
+						<div class="item" id="item17">
 							<div class="itemtop">
 								<p class="itemtext">Lobster Roll</p>
 								<p class="price">$10.99</p>
@@ -210,7 +218,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item18">
 							<div class="itemtop">
 								<p class="itemtext">Blob Fish Roll</p>
 								<p class="price">$12.99</p>
@@ -220,7 +228,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item19">
 							<div class="itemtop">
 								<p class="itemtext">Jelly Fish Roll</p>
 								<p class="price">$6.99</p>
@@ -230,7 +238,7 @@
 						</div>
 					</th>
 					<th>
-						<div class="item">
+						<div class="item" id="item20">
 							<div class="itemtop">
 								<p class="itemtext">Vegan Roll</p>
 								<p class="price">$15.99</p>
