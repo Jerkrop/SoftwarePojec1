@@ -16,71 +16,21 @@
 			src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
 		></script>
 	</head>
-	<style>
-		/* customizable snowflake styling */
-		.snowflake {
-		  color: #fff;
-		  font-size: 1em;
-		  font-family: Arial, sans-serif;
-		  text-shadow: 0 0 5px #000;
-		}
-		
-		@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
-		</style>
-		<div class="snowflakes" aria-hidden="true">
-		  <div class="snowflake">
-		  ❅
-		  </div>
-		  <div class="snowflake">
-		  ❆
-		  </div>
-		  <div class="snowflake">
-		  ❅
-		  </div>
-		  <div class="snowflake">
-		  ❆
-		  </div>
-		  <div class="snowflake">
-		  ❅
-		  </div>
-		  <div class="snowflake">
-		  ❆
-		  </div>
-		  <div class="snowflake">
-			 ❅
-		  </div>
-		  <div class="snowflake">
-			 ❆
-		  </div>
-		  <div class="snowflake">
-			 ❅
-		  </div>
-		  <div class="snowflake">
-			 ❆
-		  </div>
-		  <div class="snowflake">
-			 ❅
-		  </div>
-		  <div class="snowflake">
-			 ❆
-		  </div>
-		</div>
 	<body>
-		<div class="nav">
+		<div id="menuNav" class="nav">
 			<ul>
 				<li><a href="HomePage.html">Home</a></li>
 				<li><a href="MenuPage.html">Menu</a></li>
 				<li><a href="PurchasePage.html">Cart</a></li>
-				<li><a href="Login.html">Log In</a></li>
+				<li><a id="loginbtn" href="Login.html">Log In</a></li>
 			</ul>
 		</div>
-		<div class="top">
+		<div id="top">
 			<div id="topLogo">
 				<img src=images/logo1.png class="logo">
 			</div>
 			<h2 id="menuHead" class="header">Menu</h2>
 		</div>
-		<br />
 		<div class='centered'>
 			<div id="menu">
 			<table>
@@ -307,8 +257,8 @@
 		</div>
 		
 
-<div class="myosushi">
-		<form id="customSushi">
+<div id="myosushi">
+		<form onSubmit="event.preventDefault()" id="customSushi">
 			<div id="customHead">
 			<h2>Make Your Own Sushi</h2>
 			<p>
@@ -368,10 +318,10 @@
 				</tr>
 			</table>
 		</div>
-			<button class="sushiButton">Create Sushi</button>
+			<button class="sushiButton" onclick="addToCart(this.id)" id="20">Create Sushi</button>
 		</form>
 		</div>
-		<div class="centered">
+		<div id="cartContainer" class="centered">
 			<div class="cart">
 	
 				<h1>confirm selection?</h1>
@@ -379,22 +329,53 @@
 				  
 			  </ul>
 			  <p id="totalCosts">Total price: <span id="totalPrice"></span></p>
-				<button type="button">Buy</button>
+				<button type="button" onclick="confirmOrder()">Buy</button>
 			</div>
 		</div>
 		<div id="checkoutContainer">
 			<section id="checkout">
 				<div id="discount">
 					<h3>Would you like to redeem 100 rewards points for a 10% discount?</h3>
-					<button>Yes</button>
-					<button>No</button>
+					<div id="discountButtons">
+						<button onclick="calculateRewards()">Yes</button>
+						<button onclick="denyDiscount()">No</button>
+					</div>
 				</div>
-				<h2>Are you sure you want to checkout?</h2>
-				<h3>Your order total is <span id="checkoutTotal"></span></h3>
+				<div id="checkoutBoxText">
+					<h2>Are you sure you want to checkout?</h2>
+					<div id="checkoutButtons">
+						<button onclick="finishCheckout()">Yes</button>
+						<button onclick="cancelOrder()">No</button>
+					</div>
+					<h3>Your order total is <span id="checkoutTotal"></span></h3>
+				</div>
 			</section>
-			</div>
+		</div>
 
-		<footer>
+		<div id="paymentContainer">
+		<section id="payment">
+		<h2>Insert payment information</h2>
+		<div id="paymentInputs">
+			<div id="cardNumber">
+				<p>Credit Card Number</p>
+				<input type="text" placeholder="Card Number">
+				<p>CVV</p>
+				<input type="text" placeholder="CVV">
+				<p>Expiration Date</p>
+				<input type="month">
+			</div>
+			<div id="personalInfo">
+				<p>First Name</p>
+				<input type="text" placeholder="First Name">
+				<p>Last Name</p>
+				<input type="text" placeholder="Last Name">
+			</div>
+		</div>
+		<button onclick="completedOrder()" id="purchaseItems">Complete Order</button>
+		</section>
+		</div>
+
+		<footer id="footer">
 			<img src="images/New_Project_1.png" />
 			<ul>
 				<li>
@@ -408,6 +389,18 @@
 				</li>
 			</ul>
 		</footer>
+
+		<script>
+			let localLogin = localStorage.getItem("login")
+			console.log(localLogin);
+
+			if (localLogin == true) {
+				document.getElementById("loginbtn").innerHTML = "Log Out"
+			}
+			else {
+				document.getElementById("loginbtn").innerHTML = "Log In"
+			}
+		</script>
 
 		<script
 			type="module"
