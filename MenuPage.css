@@ -85,11 +85,13 @@ body {
 	color: white;
 }
 
-.top {
+#top {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 5vh;
 }
+
 .logo {
 	width: 30%;
 }
@@ -291,8 +293,12 @@ footer ul li div a:hover {
 	backdrop-filter: blur(10px);
 	border: darkred 2px solid;
 	color: #8F1418;
-	margin: 10px;
 	padding: 10px;
+	margin-bottom: 3vh;
+}
+
+#cartItems {
+	list-style-type: none;
 }
 
 .cart h1{
@@ -353,13 +359,150 @@ footer ul li div a:hover {
 #checkout {
 	color: rgb(184, 13, 13);
 	border: 2px solid darkred;
-	backdrop-filter: blur(10px);
-	width: 50vw;
+	width: 40vw;
+	background-color:#212121;
+	height: 40vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	overflow: hidden;
 }
 
 #checkoutContainer {
+	backdrop-filter: blur(10px);
 	width: 100vw;
-	height: auto;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	text-align: center;
+}
+
+#discount {
+	flex-direction: column;
+	margin-bottom: 5vh;
+}
+
+#checkout button {
+	width: 25%;
+}
+
+#discountButtons {
+	display: flex;
+	justify-content: space-around;
+}
+
+#discountButtons button {
+	border-radius: 5px;
+	background-color: darkred;
+	color: goldenrod;
+	border: none;
+	font-size: 125%;
+	font-family: "Cinzel", serif;
+	font-weight: bold;
+	letter-spacing: 0;
+	transition: 0.3s;
+	margin: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+
+#discountButtons button:hover{
+	background-color: goldenrod;
+	color: black;
+	letter-spacing: 3px;
+	border-color:darkred;
+	cursor: pointer;
+}
+
+#checkoutButtons {
+	display: flex;
+	justify-content: space-around;
+}
+
+#checkoutButtons button {
+	border-radius: 5px;
+	background-color: darkred;
+	color: goldenrod;
+	border: none;
+	font-size: 125%;
+	font-family: "Cinzel", serif;
+	font-weight: bold;
+	letter-spacing: 0;
+	transition: 0.3s;
+	margin: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+
+#checkoutButtons button:hover{
+	background-color: goldenrod;
+	color: black;
+	letter-spacing: 3px;
+	border-color:darkred;
+	cursor: pointer;
+}
+
+#payment {
+	color:#8f1418;
+	width: 50vw;
+	height: 50vh;
+	border: 2px solid darkred;
+	background-color:#212121;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#paymentContainer {
+	backdrop-filter: blur(10px);
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#payment h2 {
+	margin-bottom: 2vh;
+}
+
+#paymentInputs {
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	margin-bottom: 10vh;
+}
+
+#purchaseItems {
+	width: 50%;
+	border-radius: 5px;
+	background-color: darkred;
+	color: goldenrod;
+	border: none;
+	font-size: 125%;
+	font-family: "Cinzel", serif;
+	font-weight: bold;
+	letter-spacing: 0;
+	transition: 0.3s;
+	margin: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+
+#purchaseItems button:hover{
+	background-color: goldenrod;
+	color: black;
+	letter-spacing: 3px;
+	border-color:darkred;
+	cursor: pointer;
 }

@@ -4,37 +4,31 @@ let newitemprice = localStorage.getItem('newitemprice')
 let newitemimage = localStorage.getItem('recent-image')
 let item21 = localStorage.getItem('item21')
 
-console.log(newitemname)
-console.log(newitemprice)
-console.log(newitemimage)
-console.log(item21)
+let dragonSushi ={Name:"dragon Sushi", Price:9.99, num:0, points: 10}
+let CheeseburgerSushi  = {Name:"Cheeseburger Sushi", Price:7.99 , num:0, points: 8}
+let Maki = {Name:"Maki", Price:8.99, num:0, points: 9}
+let Temaki =  {Name:"Temaki", Price:9.99, num:0, points: 10}
+let Uramaki = {Name:"Uramaki", Price:10.99, num:0, points: 11}
+let TigerRoll = {Name:"Tiger Roll", Price:7.99,num:0, points: 8}
+let PhiladelphiaRoll={Name:"Philadelphia Roll", Price:6.99, num:0, points: 7}
+let CrunchRoll=  {Name:"Crunch Roll", Price:9.99, num:0, points: 10}
+let DynamiteRoll= {Name:"Dynamite Roll", Price:8.99, num:0, points: 9}
+let RainbowRoll= {Name:"Rainbow Roll", Price:9.99, num:0, points: 10}
+let SurfandTurf= {Name:"Surf and Turf", Price:11.99, num:0, points: 12}
+let VolcanoRoll ={Name:"Volcano Roll", Price:7.99, num:0, points: 8}
+let SushiTaco= {Name:"Sushi Taco", Price:10.99, num:0, points: 11}
+let SpicyTunaRoll= {Name:"Spicy Tuna Roll", Price:8.99, num:0, points: 9}
+let ShrimpRoll= {Name:"Shrimp Roll", Price:11.99, num:0, points: 12}
+let SpiderRoll= {Name:"Spider Roll", Price:9.99, num:0, points: 10}
+let LobsterRoll= {Name:"Lobster Roll", Price:10.99, num:0, points: 11}
+let BlobFishRoll= {Name:"BlobFish Roll", Price:12.99, num:0, points: 13}
+let JellyFishRoll={Name:"JellyFish Roll", Price:6.99, num:0, points: 7}
+let VeganRoll= {Name:"Vegan Roll", Price:15.99, num:0, points: 16}
+let CustomSushi = {Name:"Custom Sushi", Price:8.99, num:0, points: 9}
+let newitem = {Name:newitemname, Price:newitemprice, num:0, points: 10}
 
 
-const dragonSushi ={Name:"dragon Sushi", Price:9.99, num:0, points: 10}
-const CheeseburgerSushi  = {Name:"Cheeseburger Sushi", Price:7.99 , num:0, points: 8}
-const Maki = {Name:"Maki", Price:8.99, num:0, points: 9}
-const Temaki =  {Name:"Temaki", Price:9.99, num:0, points: 10}
-const Uramaki = {Name:"Uramaki", Price:10.99, num:0, points: 11}
-const TigerRoll = {Name:"Tiger Roll", Price:7.99,num:0, points: 8}
-const PhiladelphiaRoll={Name:"Philadelphia Roll", Price:6.99, num:0, points: 7}
-const CrunchRoll=  {Name:"Crunch Roll", Price:9.99, num:0, points: 10}
-const DynamiteRoll= {Name:"Dynamite Roll", Price:8.99, num:0, points: 9}
-const RainbowRoll= {Name:"Rainbow Roll", Price:9.99, num:0, points: 10}
-const SurfandTurf= {Name:"Surf and Turf", Price:11.99, num:0, points: 12}
-const VolcanoRoll ={Name:"Volcano Roll", Price:7.99, num:0, points: 8}
-const SushiTaco= {Name:"Sushi Taco", Price:10.99, num:0, points: 11}
-const SpicyTunaRoll= {Name:"Spicy Tuna Roll", Price:8.99, num:0, points: 9}
-const ShrimpRoll= {Name:"Shrimp Roll", Price:11.99, num:0, points: 12}
-const SpiderRoll= {Name:"Spider Roll", Price:9.99, num:0, points: 10}
-const LobsterRoll= {Name:"Lobster Roll", Price:10.99, num:0, points: 11}
-const BlobFishRoll= {Name:"BlobFish Roll", Price:12.99, num:0, points: 13}
-const JellyFishRoll={Name:"JellyFish Roll", Price:6.99, num:0, points: 7}
-const VeganRoll= {Name:"Vegan Roll", Price:15.99, num:0, points: 16}
-const customsushi = {Name:"custom Sushi", Price:8.99, num:0, points: 9}
-const newitem = {Name:newitemname, Price:newitemprice, num:0, points: 10}
-
-
-const items_array = [
+let items_array = [
     dragonSushi,
     CheeseburgerSushi,
     Maki,
@@ -55,11 +49,12 @@ const items_array = [
     BlobFishRoll,
     JellyFishRoll,
     VeganRoll,
-    customsushi,
+    CustomSushi,
     newitem
 ];
 
 let cart = [];
+let receipt = [];
 
 /*
 "dragonSushi",
@@ -145,9 +140,10 @@ let oldCounter = 0;
 let totalCost = 0;
 let itemId = 0;
 
+document.getElementById("totalPrice").innerHTML = "$" + totalCost
+
 function addToCart(clicked) {
 	items_array[clicked].num = items_array[clicked].num + 1;
-	console.log(items_array[clicked].num)
 	let itemPrice = items_array[clicked].Price * items_array[clicked].num;
 	let txt =
 		items_array[clicked].num +
@@ -160,9 +156,7 @@ function addToCart(clicked) {
 		itemId = parseInt(itemId);
 		itemId = itemId + 1;
 		itemId = itemId.toString();
-		console.log(cart);
 		cart.push(items_array[clicked]);
-		console.log("The item doesnt exist in the cart");
 		rewardsPoints = rewardsPoints + items_array[clicked].points;
 		let node = document.createElement("li");
 		node.setAttribute("id", "text");
@@ -177,34 +171,82 @@ function addToCart(clicked) {
 	//changing the quantity of an item if it's already in the cart
 	else {
 		for (var i = 0; i < cart.length; i++) {
-			console.log("test")
 			if (cart[i] == items_array[clicked]) {
-				// let stringI = toString(i)
-				// console.log(i)
-				let test = document.getElementById("cartItem" + (i + 1))
-				console.log(test)
+				// let test = document.getElementById("cartItem" + (i + 1))
 				txt =
 					items_array[clicked].num +
 					" " +
 					items_array[clicked].Name +
 					" $" +
 					itemPrice.toFixed(2);
-				// console.log(document.getElementsByClassName(stringI).innerHTML)
+				rewardsPoints = rewardsPoints + items_array[clicked].points;
 				document.getElementById("cartItem" + (i +1)).innerHTML = txt;
-				console.log(document.getElementById("cartItem" + (i +1)).innerHTML)
 				totalCost = totalCost + items_array[clicked].Price;
 				document.getElementById("totalPrice").innerHTML = "$" + totalCost.toFixed(2);
 				document.getElementById("checkoutTotal").innerHTML = "$" + totalCost.toFixed(2);
 			}
 		}
 	}
-
-	var completedOrder = false;
 }
 
-function rewardsDiscount(orderPrice) {
-	if (completedOrder == true) {
-		orderPrice = orderPrice * 0.9;
-		rewardsPoints = rewardsPoints - 100;
+function confirmOrder() {
+	document.getElementById("footer").style.display = "none";
+	document.getElementById("menu").style.display = "none";
+	document.getElementById("top").style.display = "none";
+	document.getElementById("myosushi").style.display = "none";
+	document.getElementById("cartContainer").style.display = "none";
+	document.getElementById("menuNav").style.display = "none";
+	document.getElementById("checkoutContainer").style.display = "flex";
+
+	if (rewardsPoints >= 100) {
+		document.getElementById("discount").style.display = "flex";
 	}
+	else {
+		document.getElementById("discount").style.display = "none";
+	}
+}
+
+function calculateRewards() {
+	rewardsPoints = rewardsPoints - 100;
+	x = totalCost * 0.1;
+	totalCost = totalCost - x;
+	console.log(x)
+	document.getElementById("checkoutTotal").innerHTML = "$" + totalCost.toFixed(2);
+	document.getElementById("discount").style.display = "none";
+}
+
+function denyDiscount() {
+	document.getElementById("discount").style.display = "none";
+}
+
+function cancelOrder() {
+	document.getElementById("checkoutTotal").style.display = "none";
+}
+
+function finishCheckout() {
+	document.getElementById("checkoutContainer").style.display = "none";
+	document.getElementById("paymentContainer").style.display = "flex";
+}
+
+function completedOrder() {
+	for(var i = 0; i <= cart.length; i++) {
+		receipt.push(cart[i]);
+		cart.splice(i, 1);
+		console.log(cart)
+		console.log(receipt)
+	}
+	var node= document.getElementById("cartItems");
+
+	totalCost = 0
+
+	node.querySelectorAll('*').forEach(n => n.remove());
+
+	document.getElementById("footer").style.display = "flex";
+	document.getElementById("menu").style.display = "flex";
+	document.getElementById("top").style.display = "flex";
+	document.getElementById("myosushi").style.display = "flex";
+	document.getElementById("cartContainer").style.display = "flex";
+	document.getElementById("menuNav").style.display = "flex";
+	document.getElementById("paymentContainer").style.display = "none";
+	document.getElementById("totalPrice").innerHTML = "$" + totalCost;
 }

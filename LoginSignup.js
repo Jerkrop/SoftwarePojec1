@@ -1,3 +1,4 @@
+localStorage.setItem("login", false);
 
 let userArr = [];
 $(document).ready(function () {
@@ -21,19 +22,21 @@ $(document).ready(function () {
 		let curretStorage = JSON.parse(localStorage.getItem("users"));
 		if ($("#username").val() == "admin" && $("#email").val() == "admin") {
 			window.location.href = "ManagerPage.html";
+			localStorage["login"] = true;
 		} else if (curretStorage == null) {
 			const newUser = {
 				userName: $("#username").val(),
 				email: $("#email").val(),
 			};
-			console.log("ah;dfjkalhldsf");
 			localStorage.setItem("users", JSON.stringify(newUser));
 			window.location.href = "HomePage.html";
+			localStorage["login"] = true;
 		} else if (
 			$("#username").val() == curretStorage.userName &&
 			$("#email").val() == curretStorage.email
 		) {
 			window.location.href = "HomePage.html";
+			localStorage["login"] = true;
 		} else {
 			attempts -= 1;
 			if (attempts > 0) {

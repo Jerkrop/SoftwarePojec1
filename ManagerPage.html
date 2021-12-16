@@ -23,7 +23,7 @@
 				<li><a href="HomePage.html">Home</a></li>
 				<li><a href="MenuPage.html">Menu</a></li>
 				<li><a href="PurchasePage.html">Cart</a></li>
-				<li><a href="Login.html">Log In</a></li>
+				<li><a id="loginbtn" href="Login.html">Log In</a></li>
 			</ul>
 		</div>
 		<div class="top">
@@ -326,6 +326,17 @@
 				</li>
 			</ul>
 		</footer>
+		<script>
+			let localLogin = localStorage.getItem("login")
+			console.log(localLogin);
+
+			if (localLogin == true) {
+				document.getElementById("loginbtn").innerHTML = "Log Out"
+			}
+			else {
+				document.getElementById("loginbtn").innerHTML = "Log In"
+			}
+		</script>
 		<script
 			type="module"
 			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
